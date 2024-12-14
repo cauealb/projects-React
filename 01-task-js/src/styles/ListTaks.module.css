@@ -1,0 +1,27 @@
+.content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.li {
+    list-style-type: none;
+    background-color: var(--gray-300);
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+    flex-grow: 1;
+}
+
+.li:hover {
+    background-color: var(--gray-500);
+}
+
+.delete {
+    background-color: var(--gray-300);
+    border: none;
+    border-radius: 8px;
+}
