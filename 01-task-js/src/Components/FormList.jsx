@@ -5,30 +5,31 @@ import ListTaks from './ListTaks.jsx'
 
 function FormList() {
 
-    const [task, setTaskAdd] = useState([])
+    const [task, setNewTaks] = useState([])
     const [taskChange, setTaskChange] = useState('')
 
-    function handleSubmit () {
+    function handleSubmit() {
         event.preventDefault()
 
-        setTaskAdd([...task, taskChange])
+        setNewTaks([...task, taskChange])
+
         setTaskChange('')
     }
 
-    function handleChangeNewTask() {
-        console.log(event.target.value)
+    function handleChangeNewComment() {
         setTaskChange(event.target.value)
     }
+
 
     return (
         <>
             <form onSubmit={handleSubmit} className={style.form}>
-                <input value={taskChange} onChange={handleChangeNewTask} type="text" placeholder="Beber àgua..." required/>
+                <input value={taskChange} onChange={handleChangeNewComment} type="text" placeholder="Beber àgua..." required/>
                 <button className={style.btn} type="subimit">Enviar</button>
             </form>
             <div className={task.length > 0 ? style.main : style.mainHidden}>
                 {task.map(task => {
-                    return <ListTaks content={task}/>
+                    return <ListTaks key={task} content={task}/>
                 })}
             </div>
             
