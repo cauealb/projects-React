@@ -6,6 +6,7 @@ function App() {
   return (
     <>
       <section className={principal.main}>
+        <h1 className={principal.header}>Gerenciador de Tarefas</h1>
         <FormList />
       </section>
     </>
