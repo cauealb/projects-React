@@ -40,7 +40,7 @@ input {
 
 .main {
     width: 25%;
-    padding: 1rem;
+    padding: 0 1rem;
     background-color: var(--gray-200);
     border-radius: 8px;
     display: flex;

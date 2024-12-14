@@ -1,7 +1,8 @@
+import { useState } from 'react'
 import list from '../styles/ListTaks.module.css'
 
 function ListTaks({content}) {
-    console.log(content)
+
     return (
         <>
             <div className={list.content}>

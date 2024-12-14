@@ -24,4 +24,5 @@
     background-color: var(--gray-300);
     border: none;
     border-radius: 8px;
+    cursor: pointer;
 }
