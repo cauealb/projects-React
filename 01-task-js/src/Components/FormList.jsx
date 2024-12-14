@@ -20,6 +20,14 @@ function FormList() {
         setTaskChange(event.target.value)
     }
 
+    function deleteComment(comment) {
+        const newArray = task.filter(line => {
+            return line != comment
+        })
+
+        setNewTaks(newArray)
+    }
+
 
     return (
         <>
@@ -29,7 +37,7 @@ function FormList() {
             </form>
             <div className={task.length > 0 ? style.main : style.mainHidden}>
                 {task.map(task => {
-                    return <ListTaks key={task} content={task}/>
+                    return <ListTaks key={task} content={task} onDeleteComment={deleteComment}/>
                 })}
             </div>
             
