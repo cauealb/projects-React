@@ -1,4 +1,4 @@
-const GlobalThemes = {
+export const GlobalThemes = {
     '--purple-300': '#E6E6FA',
     '--purple-500': '#DDA0DD',
     '--purple-600':'#EE82EE',

@@ -1,9 +1,17 @@
+import { GlobalThemes } from "./theme/Theme"
+import { ThemeProvider } from "styled-components"
+import { BrowserRouter } from "react-router"
+import { Router } from "./pages/Router"
+
 function App() {
-  
 
   return (
     <>
-      <h1>Hello Word</h1>
+      <ThemeProvider theme={GlobalThemes}>
+        <BrowserRouter>
+            <Router></Router>
+        </BrowserRouter>
+      </ThemeProvider>
     </>
   )
 }
