@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { GlobalDivStyled, DivButtonsStyled, ButtonMaisStyled, ButtonMenosStyled } from "./Score.s";
+import { GlobalDivStyled, DivButtonsStyled, ButtonMaisStyled, ButtonMenosStyled, ButtonSaveStyled } from "./Score.s";
 
 export function Score () {
 
@@ -10,7 +10,9 @@ export function Score () {
     }
 
     function clickForDecrement() {
-        setNumberScore(numberScore - 1)
+        if (numberScore > 0) {
+            setNumberScore(numberScore - 1)
+        } 
     }
 
     return (
@@ -22,7 +24,8 @@ export function Score () {
                 </div>
                 <DivButtonsStyled>
                     <ButtonMaisStyled onClick={clickForIncrement}>Incrementar</ButtonMaisStyled>    
-                    <ButtonMenosStyled onClick={clickForDecrement}>Decrementar</ButtonMenosStyled>    
+                    <ButtonMenosStyled onClick={clickForDecrement}>Decrementar</ButtonMenosStyled> 
+                    <ButtonSaveStyled>Salvar</ButtonSaveStyled>   
                 </DivButtonsStyled>    
             </GlobalDivStyled>
 

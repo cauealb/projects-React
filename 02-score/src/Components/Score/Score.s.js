@@ -11,7 +11,9 @@ export const GlobalDivStyled = styled.div`
 
 export const DivButtonsStyled = styled.div`
     display: flex;
-    justify-content: space-between;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
 `;
 
 const ButtonsDefault = styled.button`
@@ -35,6 +37,14 @@ export const ButtonMenosStyled = styled(ButtonsDefault)`
     background-color: ${props => props.theme['--red-300']};
 
     &:hover {
-        background-color: ${props => props.theme['--red-500']}
+        background-color: ${props => props.theme['--red-500']};
+    }
+`;
+
+export const ButtonSaveStyled = styled(ButtonsDefault)`
+    background-color: ${props => props.theme['--orange-300']};
+
+    &:hover{
+        background-color: ${props => props.theme['--orange-500']}
     }
 `;
