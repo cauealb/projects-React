@@ -9,6 +9,10 @@ export function Score () {
         setNumberScore(numberScore + 1)
     }
 
+    function clickForDecrement() {
+        setNumberScore(numberScore - 1)
+    }
+
     return (
         <>
             <GlobalDivStyled>
@@ -18,7 +22,7 @@ export function Score () {
                 </div>
                 <DivButtonsStyled>
                     <ButtonMaisStyled onClick={clickForIncrement}>Incrementar</ButtonMaisStyled>    
-                    <ButtonMenosStyled>Decrementar</ButtonMenosStyled>    
+                    <ButtonMenosStyled onClick={clickForDecrement}>Decrementar</ButtonMenosStyled>    
                 </DivButtonsStyled>    
             </GlobalDivStyled>
 
