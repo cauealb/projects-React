@@ -16,9 +16,10 @@
         }
 
         function SaveIncrement () {
-            functionClick(numberScore)
-
-            setNumberScore(0)
+            if (numberScore > 0) {
+                functionClick(numberScore)
+                setNumberScore(0)
+            }
         }
         return (
             <>
