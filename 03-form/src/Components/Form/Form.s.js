@@ -7,10 +7,11 @@ export const StyledForm = styled.form`
     margin: 0.90rem auto;
     font-size: 2.2rem;
     padding: 0.75rem;
+    color: ${props => props.theme['--gray-100']};
 
-    background-color: ${props => props.theme['--gray-100']};
-    border: 1px solid ${props => props.theme['--gray-300']};
+    background-color: ${props => props.theme['--gray-900']};
     border-radius: 8px;
+    box-shadow: 0 7px 10px ${props => props.theme['--gray-700']};
 
     input {
         margin-top: 0.20rem
@@ -20,13 +21,14 @@ export const StyledForm = styled.form`
 export const StyledLabel = styled.label`
     margin-top: 1rem;
     background-color: transparent;
-    color: ${props => props.theme['--gray-900']};
+    color: inherit;
 `;
 
 export const StyledInput = styled.input`
     outline: none;
     border-radius: 4px;
-    color: ${props => props.theme['--gray-100']};
+    color: inherit;
     padding: 0.50rem;
     font-size: 1.3rem;
+    border: none;
 `;
