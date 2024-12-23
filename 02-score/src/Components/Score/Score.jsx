@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { GlobalDivStyled, DivButtonsStyled, ButtonMaisStyled, ButtonMenosStyled, ButtonSaveStyled } from "./Score.s";
 
-export function Score () {
+export function Score ({functionClick}) {
 
     const [numberScore, setNumberScore] = useState(0)
 
@@ -15,6 +15,11 @@ export function Score () {
         } 
     }
 
+    function SaveIncrement () {
+        functionClick(numberScore)
+        console.log(numberScore)
+    }
+
     return (
         <>
             <GlobalDivStyled>
@@ -25,7 +30,7 @@ export function Score () {
                 <DivButtonsStyled>
                     <ButtonMaisStyled onClick={clickForIncrement}>Incrementar</ButtonMaisStyled>    
                     <ButtonMenosStyled onClick={clickForDecrement}>Decrementar</ButtonMenosStyled> 
-                    <ButtonSaveStyled>Salvar</ButtonSaveStyled>   
+                    <ButtonSaveStyled onClick={SaveIncrement}>Salvar</ButtonSaveStyled>   
                 </DivButtonsStyled>    
             </GlobalDivStyled>
 
