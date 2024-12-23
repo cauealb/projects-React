@@ -1,9 +1,9 @@
-function App() {
+import { Header } from "./Components/Header/Heade";
+
+export function App() {
   return (
     <>
-    <h1>Hello Word</h1>
+      <Header/>
     </>
   )
 }
-
-export default App
