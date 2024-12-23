@@ -10,5 +10,9 @@ export const HeaderStyled =  styled.header`
     flex-direction: column;
     font-size: 0.75rem;
     font-family: monospace;
-    line-height: 1.2;
+    gap: 0.75rem;
+    
+    h1 {
+        margin-left: 0.75rem;
+    }
 `;
