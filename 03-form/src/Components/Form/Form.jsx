@@ -22,10 +22,10 @@ export function Form() {
 
         if (changeUsername.trim().length < 5 || changePassword.trim().length < 5) {
             alert('O Usuário ou Senha precisa ter no mínimo 5 caractáres')
-
-        } else {
-            setListLogin([...listLogin, {user: changeUsername, pass: changePassword}])
-        }
+            return
+        } 
+        
+        setListLogin([...listLogin, {user: changeUsername, pass: changePassword}])
         setChagePassword('')
         setChageUsername('')
     }
