@@ -30,11 +30,12 @@ export function Form() {
         setChageUsername('')
     }
 
-    function handleEditLogin(pass) {
+    function handleEditLogin(user, pass) {
         const newList = listLogin.filter(item => item.pass != pass)
-        console.log(newList)
-
         setListLogin(newList)
+
+        setChageUsername(user)
+        setChagePassword(pass)
     }
 
     return (

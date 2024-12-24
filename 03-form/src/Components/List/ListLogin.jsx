@@ -3,7 +3,7 @@ import { StyledSection, StyledParagraph, StyledButtonList, StyledDivParagraph } 
 export function List({infos, editFunction}) {
 
     function handleClickChange () {
-        editFunction(infos.pass)
+        editFunction(infos.user, infos.pass)
     }
 
     return (
