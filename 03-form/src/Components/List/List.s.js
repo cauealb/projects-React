@@ -22,10 +22,11 @@ export const StyledDivParagraph = styled.div`
 
 export const StyledParagraph = styled.p`
     background-color: transparent;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     padding: 0.50rem;
     border-radius: 8px;
     background-color: ${props => props.theme['--gray-700']}; 
+    cursor: pointer;
 `;
 
 export const StyledButtonList = styled.button`
@@ -37,4 +38,9 @@ export const StyledButtonList = styled.button`
     border: none;
     border-radius: 8px;
     margin: 1rem 0;
+    transition: all 0.2s linear;
+
+    &:hover {
+        background-color: ${props => props.theme['--green-500']};
+    }
 `;

@@ -44,5 +44,10 @@ export const StyledButton = styled.button`
     padding: 0.75rem 3rem;
     margin-top: 1.2rem;
     width: fit-content;
-    align-self: center
+    align-self: center;
+    transition: all 0.2s linear;
+
+    &:hover {
+        background-color: ${props => props.theme['--green-500']};
+    }
 `;
