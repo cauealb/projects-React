@@ -6,20 +6,12 @@ import { List } from "./Components/List/ListLogin";
 import { useState } from "react";
 
 function App() {
-  const [itemList, setItemList] = useState([])
 
-  function SubmitItens(user, pass) {
-    event.preventDefault()
-    setItemList([...itemList, itemList])
-  }
 
   return (
     <>
       <ThemeProvider theme={DefaultStyledTheme}>
-        <Form submit={SubmitItens}/>
-        {itemList.map(item => {
-          return <List /> 
-        })}
+        <Form />
         <GlobalCSS />
       </ThemeProvider>
     </>
