@@ -8,7 +8,7 @@ import { useState } from "react";
 function App() {
   const [itemList, setItemList] = useState([])
 
-  function SubmitItens() {
+  function SubmitItens(user, pass) {
     event.preventDefault()
     setItemList([...itemList, itemList])
   }
