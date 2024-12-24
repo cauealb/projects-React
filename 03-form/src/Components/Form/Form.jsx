@@ -20,14 +20,21 @@ export function Form() {
     function HandleSubmitLogin() {
         event.preventDefault()
 
-        if (changeUsername.length < 5 || changePassword.length < 5) {
-            alert('O Usuário ou Senha precisa ter no mínimo 5 caracteres')
+        if (changeUsername.trim().length < 5 || changePassword.trim().length < 5) {
+            alert('O Usuário ou Senha precisa ter no mínimo 5 caractáres')
+
         } else {
             setListLogin([...listLogin, {user: changeUsername, pass: changePassword}])
-
-            setChagePassword('')
-            setChageUsername('')
         }
+        setChagePassword('')
+        setChageUsername('')
+    }
+
+    function handleEditLogin(pass) {
+        const newList = listLogin.filter(item => item.pass != pass)
+        console.log(newList)
+
+        setListLogin(newList)
     }
 
     return (
@@ -42,7 +49,7 @@ export function Form() {
                 <StyledButton type="submit">Send</StyledButton>
             </StyledForm>
             {listLogin.map(item => {
-                return <List infos={item}/>
+                return <List key={item.pass} infos={item} editFunction={handleEditLogin}/>
             })}
 
         </>

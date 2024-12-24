@@ -1,6 +1,10 @@
 import { StyledSection, StyledParagraph, StyledButtonList, StyledDivParagraph } from "./List.s";
 
-export function List({infos}) {
+export function List({infos, editFunction}) {
+
+    function handleClickChange () {
+        editFunction(infos.pass)
+    }
 
     return (
         <>
@@ -9,7 +13,7 @@ export function List({infos}) {
                     <StyledParagraph>{infos.user}</StyledParagraph>
                     <StyledParagraph>{infos.pass}</StyledParagraph>
                 </StyledDivParagraph>
-                <StyledButtonList>Change</StyledButtonList>
+                <StyledButtonList onClick={handleClickChange}>Change</StyledButtonList>
             </StyledSection>
         </>
     )
