@@ -7,6 +7,7 @@ export const StyledSection = styled.section`
     font-size: 2.2rem;
     width: 20%;
     margin: auto;
+    margin-bottom: 1rem;
     
     background-color: ${props => props.theme['--gray-900']};
     border-radius: 8px;

@@ -10,6 +10,14 @@ export function List() {
                 </StyledDivParagraph>
                 <StyledButtonList>Change</StyledButtonList>
             </StyledSection>
+
+            <StyledSection>
+                <StyledDivParagraph>
+                    <StyledParagraph>User</StyledParagraph>
+                    <StyledParagraph>Password</StyledParagraph>
+                </StyledDivParagraph>
+                <StyledButtonList>Change</StyledButtonList>
+            </StyledSection>
         </>
     )
 }
