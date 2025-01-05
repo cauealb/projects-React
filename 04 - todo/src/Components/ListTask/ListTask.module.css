@@ -14,4 +14,19 @@
     align-items: center;
     justify-content: center;
     gap: 0.40rem;
+    font-weight: bold;
+}
+
+.infos_messages > p:first-child {
+    color: var(--blue-300);
+}
+
+.infos_messages:last-child > p{
+    color: var(--purple-300);
+}
+
+.numbertask {
+    background-color: var(--gray-400);
+    padding: 0.20rem 0.50rem;
+    border-radius: 8px;
 }

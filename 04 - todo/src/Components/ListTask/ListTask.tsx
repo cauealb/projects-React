@@ -13,13 +13,13 @@ export function ListTask () {
                         <p>
                             Tarefas criadas
                         </p>
-                        <span>{taskCreate}</span>
+                        <span className={styleList.numbertask}>{taskCreate}</span>
                     </div>
                     <div className={styleList.infos_messages}>
-                    <p>
-                        Concluídas
-                    </p>
-                        <span>{taskFinished}</span>
+                        <p>
+                            Concluídas
+                        </p>
+                        <span className={styleList.numbertask}>{taskFinished}</span>
                     </div>
                 </div>
             </div>
