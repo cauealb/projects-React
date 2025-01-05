@@ -1,6 +1,7 @@
 import { PlusCircle } from 'phosphor-react'
 import styleHeader from './HeadeStyle.module.css'
 import logoTodo from  '../../assets/Logo todo.svg'
+import { ListTask } from '../ListTask/ListTask'
 
 export function Header() {
     return (
@@ -12,6 +13,7 @@ export function Header() {
                     <button className={styleHeader.btn}>Criar <PlusCircle size={15}/></button>
                 </form>
             </header>
+            <ListTask />
         </>
     )
 }
