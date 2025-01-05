@@ -25,4 +25,5 @@ body {
     box-sizing: border-box;
 
     background-color: var(--gray-500);
+    color: var(--gray-100);
 }

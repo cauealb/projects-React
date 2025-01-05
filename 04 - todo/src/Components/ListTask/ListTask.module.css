@@ -1,0 +1,17 @@
+.content {
+    margin: 4rem auto;
+    width: 40%;
+}
+
+.infos {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--gray-400);
+}
+
+.infos_messages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.40rem;
+}
