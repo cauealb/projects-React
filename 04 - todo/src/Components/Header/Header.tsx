@@ -1,12 +1,13 @@
 import { PlusCircle } from 'phosphor-react'
 import styleHeader from './HeadeStyle.module.css'
 import logoTodo from  '../../assets/Logo todo.svg'
-import { ListTask } from '../ListTask/ListTask'
 import { useState } from 'react'
 
 export function Header() {
 
     const [changeTask, setChangeTask] = useState('')
+    const [taskCreate, setTaskCreate] = useState<number>(0)
+    const [taskFinished, setTaskFinished] = useState<number>(0)
 
     return (
         <>  
@@ -17,7 +18,22 @@ export function Header() {
                     <button disabled={!changeTask} className={styleHeader.btn}>Criar <PlusCircle size={15}/></button>
                 </form>
             </header>
-            <ListTask />
+            <div className={styleHeader.content}>
+                <div className={styleHeader.infos}>
+                    <div className={styleHeader.infos_messages}>
+                        <p>
+                            Tarefas criadas
+                        </p>
+                        <span className={styleHeader.numbertask}>{taskCreate}</span>
+                    </div>
+                    <div className={styleHeader.infos_messages}>
+                        <p>
+                            Concluídas
+                        </p>
+                        <span className={styleHeader.numbertask}>{taskFinished} de {taskCreate}</span>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }

@@ -69,3 +69,36 @@
 .btn:disabled {
     opacity: 0.7;
 }
+
+.content {
+    margin: 4rem auto;
+    width: 40%;
+}
+
+.infos {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--gray-400);
+}
+
+.infos_messages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.40rem;
+    font-weight: bold;
+}
+
+.infos_messages > p:first-child {
+    color: var(--blue-300);
+}
+
+.infos_messages:last-child > p{
+    color: var(--purple-300);
+}
+
+.numbertask {
+    background-color: var(--gray-400);
+    padding: 0.20rem 0.50rem;
+    border-radius: 8px;
+}
