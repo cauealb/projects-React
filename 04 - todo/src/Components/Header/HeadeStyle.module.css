@@ -1,7 +1,7 @@
 .logo {
     font-size: 2rem;
     font-weight: bold;
-    padding: 2rem 0;
+    padding: 2.6rem 0;
 }
 
 .logo_1 {
@@ -14,6 +14,12 @@
 
 .header {
     background-color: var(--gray-700);  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
 }
 
 .hero {
@@ -24,10 +30,28 @@
     text-align: center;
 }
 
-
 form {
     display: flex;
     gap: 0.8rem;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    margin-top: 7.4rem;
+}   
+
+.taskname {
+    background-color: var(--gray-400);
+    width: 35%;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    color: var(--gray-100);
+    font-size: 0.85rem;
+    padding: 0.50rem;
+
+    &::placeholder {
+        color: var(--gray-300);
+    }
 }
 
 .btn {
@@ -35,7 +59,7 @@ form {
     color: var(--gray-100);
     border: none;
     color: white;
-    padding: 0.6rem;
+    padding: 0.8rem 1rem;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s linear;
