@@ -1,6 +1,11 @@
 import { useState } from 'react'
 import styleList from './ListTask.module.css'
 import Clipboard  from '../../assets/Clipboard.svg'
+import { Trash } from 'phosphor-react'
+
+const api = [
+    "Estudar programação"
+]
 
 export function ListTask () {
     const [taskCreate, setTaskCreate] = useState<number>(0)
@@ -24,13 +29,30 @@ export function ListTask () {
                     </div>
                 </div>
 
-                <div className={styleList.alert_notask}>
+                <div className={styleList.content__task}>
+                    <form className={styleList.radio}>
+                        <input type="radio" />
+                    </form>
+                        <p>ESTUDAR PROGRAMAÇÃO</p>
+                        <Trash size={20} />
+                </div>
+
+
+                {/* {api.map((item) => {
+                    return (
+                        <div>
+
+                        </div>
+                    )
+                })} */}
+
+                {/* <div className={styleList.alert_notask}>
                     <img src={Clipboard}/>
                     <div className={styleList.notask__infos}>
                         <p>Você ainda não tem tarefas cadastradas</p>
                         <p>Crie tarefas e organize seus itens a fazer</p>
                     </div>
-                </div>
+                </div> */}
             </div>
         </>
     )

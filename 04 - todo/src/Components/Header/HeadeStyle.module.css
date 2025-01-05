@@ -21,7 +21,7 @@
     text-align: center;
 }
 
-form {
+.inputs__form {
     display: flex;
     gap: 0.8rem;
     width: 100%;
