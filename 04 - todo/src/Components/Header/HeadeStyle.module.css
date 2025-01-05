@@ -61,5 +61,11 @@ form {
 
     &:hover:not(:disabled) {
         background-color: var(--blue-300);
+        cursor: pointer;
+        opacity: 1;
     }
+}
+
+.btn:disabled {
+    opacity: 0.7;
 }
