@@ -1,0 +1,46 @@
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 2rem 0;
+}
+
+.logo_1 {
+    color: var(--blue-300)
+}
+
+.logo_2 {
+    color: var(--purple-500);
+}
+
+.header {
+    background-color: var(--gray-700);  
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.40rem;
+    text-align: center;
+}
+
+
+form {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.btn {
+    background-color: var(--blue-500);
+    color: var(--gray-100);
+    border: none;
+    color: white;
+    padding: 0.6rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+
+    &:hover {
+        background-color: var(--blue-300);
+    }
+}
