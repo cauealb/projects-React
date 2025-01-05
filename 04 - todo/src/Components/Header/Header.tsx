@@ -10,14 +10,12 @@ export function Header() {
     const [task, setTask] = useState<string[]>([])
     const [changeTask, setChangeTask] = useState<string>('')
 
-    const [taskCreate, setTaskCreate] = useState<number>(0)
     const [taskFinished, setTaskFinished] = useState<number>(0)
 
     function handleSubmitNewTask() {
         event?.preventDefault()
 
         setTask([...task, changeTask])
-        setTaskCreate(state => state + 1)
         setChangeTask('')
     }
 
@@ -41,13 +39,13 @@ export function Header() {
                         <p>
                             Tarefas criadas
                         </p>
-                        <span className={styleHeader.numbertask}>{taskCreate}</span>
+                        <span className={styleHeader.numbertask}>{task.length}</span>
                     </div>
                     <div className={styleHeader.infos_messages}>
                         <p>
                             Concluídas
                         </p>
-                        <span className={styleHeader.numbertask}>{taskFinished} de {taskCreate}</span>
+                        <span className={styleHeader.numbertask}>{taskFinished} de {task.length}</span>
                     </div>
                 </div>
 
