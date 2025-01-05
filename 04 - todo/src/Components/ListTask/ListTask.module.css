@@ -1,7 +1,6 @@
 .content {
     margin: 4rem auto;
     width: 40%;
-    /* background-color: yellow; */
 }
 
 .infos {
@@ -53,11 +52,27 @@
 
 .content__task {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    margin-top: 0.75rem;
+    margin-top: 0.60rem;
+    width: 100%;
+    background-color: var(--gray-400);
+    padding: 0.70rem;
+    border-radius: 8px;
+    box-sizing: border-box;
 }
 
 .content__task p {
     flex-grow: 1;
+    font-size: 0.75rem;
+    margin: 0 0.70rem;
+}
+
+.content__task span {
+    color: var(--gray-300);
+    cursor: pointer;
+    transition: color 0.2s linear;
+
+    &:hover {
+        color: var(--red-500);
+    }
 }
