@@ -102,3 +102,22 @@
     padding: 0.20rem 0.50rem;
     border-radius: 8px;
 }
+
+.alert_notask {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.60rem;
+    margin-top: 3rem;
+}
+
+.notask__infos {
+    color: var(--gray-300);
+    line-height: 0.7;
+    font-size: 0.75rem;
+}
+
+.notask__infos > p:first-child {
+    font-weight: bold;
+}

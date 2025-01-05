@@ -1,18 +1,25 @@
-import { useState } from 'react'
 import styleList from './ListTask.module.css'
-import Clipboard  from '../../assets/Clipboard.svg'
 import { Trash } from 'phosphor-react'
 
-export function ListTask () {
+interface TaskProps {
+    content: string
+    taskFinished: () => void
+}
+
+export function ListTask ({content, taskFinished}: TaskProps) {
     
+    function handleFinichesTask() {
+        taskFinished()
+    }
+
     return (
-        <>
-            <div className={styleList.alert_notask}>
-                <img src={Clipboard}/>
-                <div className={styleList.notask__infos}>
-                    <p>Você ainda não tem tarefas cadastradas</p>
-                    <p>Crie tarefas e organize seus itens a fazer</p>
-                </div>
+        <>  
+            <div className={styleList.content__task}>
+                <form className={styleList.radio}>
+                    <input onClick={handleFinichesTask} type="radio" />
+                </form>
+                <p>{content}</p>
+                <span><Trash size={20} /></span>
             </div>
         </>
     )
