@@ -3,23 +3,24 @@ import { Trash } from 'phosphor-react'
 
 interface TaskProps {
     content: string
-    taskFinished: () => void
+    dateCreate: number
 }
 
-export function ListTask ({content, taskFinished}: TaskProps) {
-    
-    function handleFinichesTask() {
-        taskFinished()
-    }
 
+export function ListTask ({content, dateCreate}: TaskProps) {
+    
+    function deleteTask() {
+        
+    }
+    
     return (
         <>  
             <div className={styleList.content__task}>
                 <form className={styleList.radio}>
-                    <input onClick={handleFinichesTask} type="radio" />
+                    <input type="checkbox" />
                 </form>
                 <p>{content}</p>
-                <span><Trash size={20} /></span>
+                <span onClick={deleteTask}><Trash size={20} /></span>
             </div>
         </>
     )

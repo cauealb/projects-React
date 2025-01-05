@@ -5,9 +5,14 @@ import Clipboard  from '../../assets/Clipboard.svg'
 import { useState } from 'react'
 import { ListTask } from '../ListTask/ListTask'
 
+interface NewTask {
+    content: string
+    dateCreate: number
+}
+
 export function Header() {
 
-    const [task, setTask] = useState<string[]>([])
+    const [task, setTask] = useState<NewTask[]>([])
     const [changeTask, setChangeTask] = useState<string>('')
 
     const [taskFinished, setTaskFinished] = useState<number>(0)
@@ -15,13 +20,13 @@ export function Header() {
     function handleSubmitNewTask() {
         event?.preventDefault()
 
-        setTask([...task, changeTask])
-        setChangeTask('')
-    }
+        const newTask: NewTask = {
+            content: changeTask,
+            dateCreate: new Date().getTime()
+        }
 
-    function TaskFinished() {
-        console.log('oi')
-        setTaskFinished(state => state + 1)
+        setTask([...task, newTask])
+        setChangeTask('')
     }
 
     return (
@@ -51,7 +56,11 @@ export function Header() {
 
                 {task.length > 0 ? (
                     task.map((item) => {
-                        return <ListTask content={item} taskFinished={TaskFinished}/>
+                        return <ListTask 
+                                    key={item.dateCreate} 
+                                    content={item.content} 
+                                    dateCreate={item.dateCreate}
+                                />
                     })
                 ) : (
                     <div className={styleHeader.alert_notask}>
