@@ -9,8 +9,8 @@ export function Header() {
             <header className={styleHeader.header}>
                 <img className={styleHeader.logo} src={logoTodo} alt="Logo da todo" />   
                 <form>
-                    <input className={styleHeader.taskname} type="text" placeholder="Adicione uma nova tarefa"/>
-                    <button className={styleHeader.btn}>Criar <PlusCircle size={15}/></button>
+                    <input className={styleHeader.taskname} type="text" required autoFocus autoComplete='off' placeholder="Adicione uma nova tarefa"/>
+                    <button disabled className={styleHeader.btn}>Criar <PlusCircle size={15}/></button>
                 </form>
             </header>
             <ListTask />

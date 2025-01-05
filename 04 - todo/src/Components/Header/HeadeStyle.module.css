@@ -52,14 +52,14 @@ form {
     color: white;
     padding: 0.8rem 1rem;
     border-radius: 8px;
-    cursor: pointer;
+    cursor: not-allowed;
     transition: all 0.2s linear;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.2rem;
 
-    &:hover {
+    &:hover:not(:disabled) {
         background-color: var(--blue-300);
     }
 }
