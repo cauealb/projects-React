@@ -27,8 +27,9 @@ export function Header() {
     }
 
     function deleteTask(dateCreate: number) {
+        const NewArray = task.filter((item) => item.dateCreate != dateCreate)
 
-        
+        setTask(NewArray)
     }
 
     return (
