@@ -16,13 +16,11 @@ export function Header() {
 
     function handleSubmitNewTask() {
         event?.preventDefault()
-    
+
         const newTask: NewTask = {
             content: changeTask,
             dateCreate: new Date().getTime()
         }
-
-        console.log(newTask)
     
         setTask([...task, newTask])
         setChangeTask('')
@@ -32,9 +30,8 @@ export function Header() {
         <>  
             <header className={styleHeader.header}>
                 <img className={styleHeader.logo} src={logoTodo} alt="Logo da todo" />   
-                <form className={styleHeader.inputs__form}>
-                    <input 
-                        onSubmit={handleSubmitNewTask}
+                <form onSubmit={handleSubmitNewTask} className={styleHeader.inputs__form}>
+                    <input
                         onChange={(e) => setChangeTask(e.target.value)} 
                         className={styleHeader.taskname} 
                         type="text" 

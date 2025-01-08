@@ -7,8 +7,6 @@ interface ListTaskProps {
 }
 
 export function ListTask ({content, dateCreate}: ListTaskProps) {
-    
-    console.log(dateCreate)
 
     return (
         <>  
