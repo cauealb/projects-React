@@ -4,13 +4,13 @@ import { Trash } from 'phosphor-react'
 interface ListTaskProps {
     content: string
     dateCreate: number
-    deleteTask: () => void
+    deleteTask: (dateCreate: number) => void
 }
 
 export function ListTask ({content, dateCreate, deleteTask}: ListTaskProps) {
 
     function handleClickDelete() {
-        deleteTask()
+        deleteTask(dateCreate)
     }
 
     return (

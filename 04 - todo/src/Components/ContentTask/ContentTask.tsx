@@ -9,7 +9,7 @@ interface NewTask {
 
 interface HeaderProps {
     task: NewTask[]
-    deleteTask: () => void
+    deleteTask: (dateCreate: number) => void
 }
 
 export function ContentTask({task, deleteTask}: HeaderProps) {

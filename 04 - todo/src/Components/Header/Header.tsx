@@ -26,8 +26,9 @@ export function Header() {
         setChangeTask('')
     }
 
-    function deleteTask() {
-        console.log('deletou')
+    function deleteTask(dateCreate: number) {
+
+        
     }
 
     return (
