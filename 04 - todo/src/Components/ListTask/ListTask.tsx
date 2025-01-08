@@ -4,9 +4,14 @@ import { Trash } from 'phosphor-react'
 interface ListTaskProps {
     content: string
     dateCreate: number
+    deleteTask: () => void
 }
 
-export function ListTask ({content, dateCreate}: ListTaskProps) {
+export function ListTask ({content, dateCreate, deleteTask}: ListTaskProps) {
+
+    function handleClickDelete() {
+        deleteTask()
+    }
 
     return (
         <>  
@@ -15,7 +20,7 @@ export function ListTask ({content, dateCreate}: ListTaskProps) {
                     <input type="checkbox" />
                 </form>
                 <p>{content}</p>
-                <span><Trash size={20} /></span>
+                <span onClick={handleClickDelete} ><Trash size={20} /></span>
             </div>
         </>
     )

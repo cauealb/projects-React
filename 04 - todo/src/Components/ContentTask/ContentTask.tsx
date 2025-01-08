@@ -9,9 +9,10 @@ interface NewTask {
 
 interface HeaderProps {
     task: NewTask[]
+    deleteTask: () => void
 }
 
-export function ContentTask({task}: HeaderProps) {
+export function ContentTask({task, deleteTask}: HeaderProps) {
     
     return (
         <>
@@ -34,7 +35,7 @@ export function ContentTask({task}: HeaderProps) {
                 {task.length > 0 ? (
                     task.map((item) => {
                         return (
-                            <ListTask key={item.dateCreate} content={item.content} dateCreate={item.dateCreate}/>
+                            <ListTask key={item.dateCreate} content={item.content} dateCreate={item.dateCreate} deleteTask={deleteTask}/>
                         )
                     })
                 ) : (

@@ -26,6 +26,10 @@ export function Header() {
         setChangeTask('')
     }
 
+    function deleteTask() {
+        console.log('deletou')
+    }
+
     return (
         <>  
             <header className={styleHeader.header}>
@@ -49,7 +53,7 @@ export function Header() {
                     </button>
                 </form>
             </header>
-            <ContentTask task={task}/>
+            <ContentTask task={task} deleteTask={deleteTask}/>
         </>
     )
 }
