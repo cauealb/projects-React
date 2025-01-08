@@ -1,18 +1,15 @@
 import styleList from './ListTask.module.css'
 import { Trash } from 'phosphor-react'
 
-interface TaskProps {
+interface ListTaskProps {
     content: string
     dateCreate: number
 }
 
+export function ListTask ({content, dateCreate}: ListTaskProps) {
+    
+    console.log(dateCreate)
 
-export function ListTask ({content, dateCreate}: TaskProps) {
-    
-    function deleteTask() {
-        
-    }
-    
     return (
         <>  
             <div className={styleList.content__task}>
@@ -20,7 +17,7 @@ export function ListTask ({content, dateCreate}: TaskProps) {
                     <input type="checkbox" />
                 </form>
                 <p>{content}</p>
-                <span onClick={deleteTask}><Trash size={20} /></span>
+                <span><Trash size={20} /></span>
             </div>
         </>
     )
