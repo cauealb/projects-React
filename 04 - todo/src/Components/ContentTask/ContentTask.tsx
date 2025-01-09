@@ -3,8 +3,9 @@ import Clipboard from '../../assets/Clipboard.svg'
 import { ListTask } from '../ListTask/ListTask'
 
 interface NewTask {
-    content: string
     dateCreate: number
+    content: string
+    isComplete: boolean
 }
 
 interface HeaderProps {
@@ -35,7 +36,7 @@ export function ContentTask({task, deleteTask}: HeaderProps) {
                 {task.length > 0 ? (
                     task.map((item) => {
                         return (
-                            <ListTask key={item.dateCreate} content={item.content} dateCreate={item.dateCreate} deleteTask={deleteTask}/>
+                            <ListTask key={item.dateCreate} content={item.content} dateCreate={item.dateCreate} isComplete={item.isComplete} deleteTask={deleteTask}/>
                         )
                     })
                 ) : (

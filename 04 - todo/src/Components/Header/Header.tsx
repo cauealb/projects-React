@@ -5,8 +5,9 @@ import { ContentTask } from '../ContentTask/ContentTask.tsx'
 import { useState } from 'react'
 
 interface NewTask {
-    content: string
     dateCreate: number
+    content: string
+    isComplete: boolean
 }
 
 export function Header() {
@@ -19,7 +20,8 @@ export function Header() {
 
         const newTask: NewTask = {
             content: changeTask,
-            dateCreate: new Date().getTime()
+            dateCreate: new Date().getTime(),
+            isComplete: false
         }
     
         setTask([...task, newTask])
