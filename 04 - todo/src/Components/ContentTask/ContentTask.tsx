@@ -3,6 +3,7 @@ import Clipboard from '../../assets/Clipboard.svg'
 import { ListTask } from '../ListTask/ListTask'
 
 interface NewTask {
+    id: number
     dateCreate: number
     content: string
     isComplete: boolean
@@ -17,8 +18,13 @@ export function ContentTask({task, deleteTask}: HeaderProps) {
     
     function handleCompleteTask(id: number) {
         task.map((item) => {
-            // if (item.)
+            if (item.id === id) {
+                return { ...task, isComplete: true}
+            } else {
+                return item
+            }
         })
+        console.log(task)
     }
 
     return (
@@ -43,7 +49,8 @@ export function ContentTask({task, deleteTask}: HeaderProps) {
                     task.map((item) => {
                         return (
                             <ListTask 
-                                key={item.dateCreate} 
+                                key={item.id} 
+                                id={item.id}
                                 content={item.content} 
                                 dateCreate={item.dateCreate} 
                                 isComplete={item.isComplete} 

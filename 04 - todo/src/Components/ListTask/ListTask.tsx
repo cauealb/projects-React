@@ -2,6 +2,7 @@ import styleList from './ListTask.module.css'
 import { Trash } from 'phosphor-react'
 
 interface ListTaskProps {
+    id: number
     content: string
     dateCreate: number
     isComplete: boolean
@@ -9,10 +10,10 @@ interface ListTaskProps {
     handleCompleteTask: (id: number) => void
 }
 
-export function ListTask ({content, dateCreate, isComplete, deleteTask, handleCompleteTask}: ListTaskProps) {
+export function ListTask ({content, dateCreate, id, deleteTask, handleCompleteTask}: ListTaskProps) {
 
     function handleClickDelete() {
-        deleteTask(dateCreate)
+        deleteTask(id)
     }
 
     function CompleteTask() {
