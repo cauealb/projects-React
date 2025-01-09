@@ -15,6 +15,12 @@ interface HeaderProps {
 
 export function ContentTask({task, deleteTask}: HeaderProps) {
     
+    function handleCompleteTask(id: number) {
+        task.map((item) => {
+            // if (item.)
+        })
+    }
+
     return (
         <>
             <div className={styleContent.content}>
@@ -36,7 +42,14 @@ export function ContentTask({task, deleteTask}: HeaderProps) {
                 {task.length > 0 ? (
                     task.map((item) => {
                         return (
-                            <ListTask key={item.dateCreate} content={item.content} dateCreate={item.dateCreate} isComplete={item.isComplete} deleteTask={deleteTask}/>
+                            <ListTask 
+                                key={item.dateCreate} 
+                                content={item.content} 
+                                dateCreate={item.dateCreate} 
+                                isComplete={item.isComplete} 
+                                deleteTask={deleteTask}
+                                handleCompleteTask={handleCompleteTask}
+                            />
                         )
                     })
                 ) : (
