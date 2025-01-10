@@ -1,7 +1,5 @@
 import styleList from './ListTask.module.css'
 import { Trash } from 'phosphor-react'
-// import CircleSVG from '../../assets/Layer 1.svg'
-// import CircleCheckSVG from '../../assets/Layer 2.svg'
 import CircleSVG from '../../assets/checkFalse.svg'
 import CircleCheckSVG from '../../assets/checkTrue.svg'
 
@@ -30,9 +28,9 @@ export function ListTask ({content, id, isComplete,deleteTask, handleCompleteTas
         <>  
             <div className={styleList.content__task}>
                 {isComplete ? (
-                    <img onClick={CompleteTask} src={CircleSVG}/>
+                    <img className={styleList.input} onClick={CompleteTask} src={CircleSVG}/>
                 ) : (
-                    <img onClick={CompleteTask} src={CircleCheckSVG} />
+                    <img className={styleList.input} onClick={CompleteTask} src={CircleCheckSVG} />
                 )}
 
                 <p className={isComplete ? styleList.content_risck : styleList.content_norisck}>{content}</p>
