@@ -1,6 +1,7 @@
 import styleContent from './ContentTask.module.css'
 import Clipboard from '../../assets/Clipboard.svg'
 import { ListTask } from '../ListTask/ListTask'
+import { useState } from 'react'
 
 interface NewTaskContent {
     id: number
@@ -18,6 +19,8 @@ interface HeaderProps {
 
 export function ContentTask({task, deleteTask, completeTask, handleNotCompleteTask}: HeaderProps) {
     
+    const [completedTasks, setCompletedTasks] = useState(task.length)
+
     function handleCompleteTask(id: number) {
         completeTask(id)
     }
@@ -36,7 +39,7 @@ export function ContentTask({task, deleteTask, completeTask, handleNotCompleteTa
                         <p>
                             Concluídas
                         </p>
-                        <span className={styleContent.numbertask}>0 de {task.length}</span>
+                        <span className={styleContent.numbertask}>{completedTasks} de {task.length}</span>
                     </div>
                 </div>
 
