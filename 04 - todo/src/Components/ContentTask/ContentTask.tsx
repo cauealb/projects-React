@@ -12,19 +12,20 @@ interface NewTaskContent {
 interface HeaderProps {
     task: NewTaskContent[]
     deleteTask: (id: number) => void
+    completeTask: (id: number) => void
 }
 
-export function ContentTask({task, deleteTask}: HeaderProps) {
+export function ContentTask({task, deleteTask, completeTask}: HeaderProps) {
     
     function handleCompleteTask(id: number) {
-        task.map((item) => {
-            if (item.id === id) {
-                return { ...task, isComplete: true}
-            } else {
-                return item
-            }
-        })
-        console.log(task)
+        completeTask(id)
+        // task.map((item) => {
+        //     if (item.id === id) {
+        //         return { ...task, isComplete: true}
+        //     } else {
+        //         return item
+        //     }
+        // })
     }
 
     return (
@@ -52,7 +53,6 @@ export function ContentTask({task, deleteTask}: HeaderProps) {
                                 key={item.id} 
                                 id={item.id}
                                 content={item.content} 
-                                dateCreate={item.dateCreate} 
                                 isComplete={item.isComplete} 
                                 deleteTask={deleteTask}
                                 handleCompleteTask={handleCompleteTask}

@@ -4,13 +4,12 @@ import { Trash } from 'phosphor-react'
 interface ListTaskProps {
     id: number
     content: string
-    dateCreate: Date
     isComplete: boolean
     deleteTask: (id: number) => void
     handleCompleteTask: (id: number) => void
 }
 
-export function ListTask ({content, dateCreate, id, deleteTask, handleCompleteTask}: ListTaskProps) {
+export function ListTask ({content, id, deleteTask, handleCompleteTask}: ListTaskProps) {
 
     function handleClickDelete() {
         deleteTask(id)
