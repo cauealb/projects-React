@@ -2,7 +2,7 @@ import styleContent from './ContentTask.module.css'
 import Clipboard from '../../assets/Clipboard.svg'
 import { ListTask } from '../ListTask/ListTask'
 
-interface NewTask {
+interface NewTaskContent {
     id: number
     dateCreate: number
     content: string
@@ -10,8 +10,8 @@ interface NewTask {
 }
 
 interface HeaderProps {
-    task: NewTask[]
-    deleteTask: (dateCreate: number) => void
+    task: NewTaskContent[]
+    deleteTask: (id: number) => void
 }
 
 export function ContentTask({task, deleteTask}: HeaderProps) {

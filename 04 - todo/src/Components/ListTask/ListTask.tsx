@@ -6,7 +6,7 @@ interface ListTaskProps {
     content: string
     dateCreate: number
     isComplete: boolean
-    deleteTask: (dateCreate: number) => void
+    deleteTask: (id: number) => void
     handleCompleteTask: (id: number) => void
 }
 

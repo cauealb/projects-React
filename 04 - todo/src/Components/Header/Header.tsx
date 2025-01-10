@@ -3,7 +3,6 @@ import styleHeader from './HeadeStyle.module.css'
 import logoTodo from  '../../assets/Logo todo.svg'
 import { ContentTask } from '../ContentTask/ContentTask.tsx'
 import { useState } from 'react'
-import { v4 as uuidv4 } from 'uuid'
 
 interface NewTask {
     id: number
@@ -12,28 +11,31 @@ interface NewTask {
     isComplete: boolean
 }
 
-export function Header() {
 
+export function Header() {
+    
     const [task, setTask] = useState<NewTask[]>([])
     const [changeTask, setChangeTask] = useState<string>('')
-
+    
     function handleSubmitNewTask() {
         event?.preventDefault()
 
         const newTask: NewTask = {
-            id: Number(uuidv4()),
+            id: new Date().getTime(),
             content: changeTask,
             dateCreate: new Date(),
             isComplete: false
         }
+
+        console.log(newTask)
     
         setTask([...task, newTask])
         setChangeTask('')
     }
 
-    function deleteTask(dateCreate: number) {
-        const NewArray = task.filter((item) => item.id != dateCreate)
-
+    function deleteTask(id: number) {
+        const NewArray = task.filter((item) => item.id != id)
+        console.log(NewArray)
         setTask(NewArray)
     }
 
