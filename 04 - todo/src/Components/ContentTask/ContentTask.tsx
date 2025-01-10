@@ -23,6 +23,7 @@ export function ContentTask({task, deleteTask, completeTask, handleNotCompleteTa
 
     function handleCompleteTask(id: number) {
         completeTask(id)
+        setCompletedTasks(state => state + 1)
     }
 
     return (
