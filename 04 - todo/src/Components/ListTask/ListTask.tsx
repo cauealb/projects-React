@@ -4,7 +4,7 @@ import { Trash } from 'phosphor-react'
 interface ListTaskProps {
     id: number
     content: string
-    dateCreate: number
+    dateCreate: Date
     isComplete: boolean
     deleteTask: (id: number) => void
     handleCompleteTask: (id: number) => void
@@ -17,7 +17,7 @@ export function ListTask ({content, dateCreate, id, deleteTask, handleCompleteTa
     }
 
     function CompleteTask() {
-        handleCompleteTask(dateCreate)
+        handleCompleteTask(id)
     }
 
     return (

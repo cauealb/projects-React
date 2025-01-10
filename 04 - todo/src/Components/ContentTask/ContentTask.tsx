@@ -4,7 +4,7 @@ import { ListTask } from '../ListTask/ListTask'
 
 interface NewTaskContent {
     id: number
-    dateCreate: number
+    dateCreate: Date
     content: string
     isComplete: boolean
 }
