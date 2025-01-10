@@ -10,9 +10,10 @@ interface ListTaskProps {
     isComplete: boolean
     deleteTask: (id: number) => void
     handleCompleteTask: (id: number) => void
+    handleNotCompleteTask: (id: number) => void
 }
 
-export function ListTask ({content, id, isComplete,deleteTask, handleCompleteTask}: ListTaskProps) {
+export function ListTask ({content, id, isComplete, deleteTask, handleCompleteTask, handleNotCompleteTask}: ListTaskProps) {
 
     function handleClickDelete() {
         deleteTask(id)
@@ -22,13 +23,15 @@ export function ListTask ({content, id, isComplete,deleteTask, handleCompleteTas
         handleCompleteTask(id)
     }
 
-    // function 
+    function NotCompleteTask() {
+        handleNotCompleteTask(id)
+    }
 
     return (
         <>  
             <div className={styleList.content__task}>
                 {isComplete ? (
-                    <img className={styleList.input} onClick={CompleteTask} src={CircleSVG}/>
+                    <img className={styleList.input} onClick={NotCompleteTask} src={CircleSVG}/>
                 ) : (
                     <img className={styleList.input} onClick={CompleteTask} src={CircleCheckSVG} />
                 )}

@@ -51,6 +51,18 @@ export function Header() {
         )
     }
 
+    function handleNotCompleteTask(id: number) {
+        setTask(
+            task.map((item) => {
+                if (item.id === id) {
+                    return { ...item, isComplete: false}
+                } else {
+                    return item
+                }
+            })
+        )
+    }
+
     return (
         <>  
             <header className={styleHeader.header}>
@@ -74,7 +86,7 @@ export function Header() {
                     </button>
                 </form>
             </header>
-            <ContentTask task={task} deleteTask={deleteTask} completeTask={MarkTaskWhithComplete}/>
+            <ContentTask task={task} deleteTask={deleteTask} completeTask={MarkTaskWhithComplete} handleNotCompleteTask={handleNotCompleteTask}/>
         </>
     )
 }

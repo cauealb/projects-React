@@ -13,19 +13,13 @@ interface HeaderProps {
     task: NewTaskContent[]
     deleteTask: (id: number) => void
     completeTask: (id: number) => void
+    handleNotCompleteTask: (id: number) => void
 }
 
-export function ContentTask({task, deleteTask, completeTask}: HeaderProps) {
+export function ContentTask({task, deleteTask, completeTask, handleNotCompleteTask}: HeaderProps) {
     
     function handleCompleteTask(id: number) {
         completeTask(id)
-        // task.map((item) => {
-        //     if (item.id === id) {
-        //         return { ...task, isComplete: true}
-        //     } else {
-        //         return item
-        //     }
-        // })
     }
 
     return (
@@ -56,6 +50,7 @@ export function ContentTask({task, deleteTask, completeTask}: HeaderProps) {
                                 isComplete={item.isComplete} 
                                 deleteTask={deleteTask}
                                 handleCompleteTask={handleCompleteTask}
+                                handleNotCompleteTask={handleNotCompleteTask}
                             />
                         )
                     })
