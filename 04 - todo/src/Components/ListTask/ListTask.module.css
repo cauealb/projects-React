@@ -1,6 +1,7 @@
 .content__task {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     margin-top: 0.60rem;
     width: 100%;
     background-color: var(--gray-400);
@@ -9,10 +10,22 @@
     box-sizing: border-box;
 }
 
-.content__task p {
+.content_norisck {
     flex-grow: 1;
     font-size: 0.75rem;
     margin: 0 0.70rem;
+}
+
+.content_risck {
+    flex-grow: 1;
+    font-size: 0.75rem;
+    margin: 0 0.70rem;
+    text-decoration: line-through;
+    color: var(--gray-300);
+}
+
+.content__task p::selection {
+    background-color: var(--gray-300);
 }
 
 .content__task span {
@@ -23,4 +36,8 @@
     &:hover {
         color: var(--red-500);
     }
+}
+
+.input {
+    cursor: pointer;
 }
