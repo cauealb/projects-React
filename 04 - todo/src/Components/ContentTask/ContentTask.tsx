@@ -26,6 +26,10 @@ export function ContentTask({task, deleteTask, completeTask, handleNotCompleteTa
         setCompletedTasks(state => state + 1)
     }
 
+    function NotCompletedTask() {
+        setCompletedTasks(state => state - 1)
+    }
+
     return (
         <>
             <div className={styleContent.content}>
@@ -55,6 +59,7 @@ export function ContentTask({task, deleteTask, completeTask, handleNotCompleteTa
                                 deleteTask={deleteTask}
                                 handleCompleteTask={handleCompleteTask}
                                 handleNotCompleteTask={handleNotCompleteTask}
+                                NotCompletedTask={NotCompletedTask}
                             />
                         )
                     })

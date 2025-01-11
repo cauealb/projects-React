@@ -11,9 +11,10 @@ interface ListTaskProps {
     deleteTask: (id: number) => void
     handleCompleteTask: (id: number) => void
     handleNotCompleteTask: (id: number) => void
+    NotCompletedTask: () => void
 }
 
-export function ListTask ({content, id, isComplete, deleteTask, handleCompleteTask, handleNotCompleteTask}: ListTaskProps) {
+export function ListTask ({content, id, isComplete, deleteTask, handleCompleteTask, handleNotCompleteTask, NotCompletedTask}: ListTaskProps) {
 
     function handleClickDelete() {
         deleteTask(id)
@@ -24,6 +25,7 @@ export function ListTask ({content, id, isComplete, deleteTask, handleCompleteTa
     }
 
     function NotCompleteTask() {
+        NotCompletedTask()
         handleNotCompleteTask(id)
     }
 
