@@ -26,8 +26,6 @@ export function Header() {
             dateCreate: new Date(),
             isComplete: false
         }
-
-        console.log(newTask)
     
         setTask([...task, newTask])
         setChangeTask('')
@@ -35,7 +33,6 @@ export function Header() {
 
     function deleteTask(id: number) {
         const NewArray = task.filter((item) => item.id != id)
-        console.log(NewArray)
         setTask(NewArray)
     }
 
@@ -52,17 +49,12 @@ export function Header() {
     }
 
     function EditTask(id: number) {
+        const arrayContent = task.find((item) => item.id === id)
+        const current = arrayContent?.content || ''
+        setChangeTask(current)
+
         const arrayEdit = task.filter((item) => item.id != id)
         setTask(arrayEdit)
-
-        const arrayContent = task.map((item) => {
-            if(item.id === id) {
-                return item.content
-            }
-        })
-
-        const current = String(arrayContent)
-        setChangeTask(current)
     }
 
     function handleNotCompleteTask(id: number) {
