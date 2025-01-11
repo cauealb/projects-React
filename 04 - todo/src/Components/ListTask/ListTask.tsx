@@ -1,5 +1,5 @@
 import styleList from './ListTask.module.css'
-import { Trash } from 'phosphor-react'
+import { Trash, PencilSimple } from 'phosphor-react'
 import CircleSVG from '../../assets/checkFalse.svg'
 import CircleCheckSVG from '../../assets/checkTrue.svg'
 
@@ -39,7 +39,10 @@ export function ListTask ({content, id, isComplete, deleteTask, handleCompleteTa
                 )}
 
                 <p className={isComplete ? styleList.content_risck : styleList.content_norisck}>{content}</p>
-                <span onClick={handleClickDelete} ><Trash size={20} /></span>
+                <div className={styleList.area_btn}>
+                    <span className={styleList.btn_remove}><PencilSimple size={20}/></span>
+                    <span className={styleList.btn_edit} onClick={handleClickDelete} ><Trash size={20} /></span>
+                </div>
             </div>
         </>
     )
