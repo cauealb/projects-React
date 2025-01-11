@@ -38,20 +38,20 @@
     color: var(--gray-300);
 }
 
-.area_btn span:last-child {
+.content__task button {
+    border: none;
     cursor: pointer;
     transition: color 0.2s linear;
-
-    &:hover {
-        color: var(--red-500);
-    }
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    color: var(--gray-300);
 }
 
-.area_btn span:first-child {
-    cursor: pointer;
-    transition: color 0.2s linear;
+.area_btn button:last-child:hover {
+    color: var(--red-500);
+}
 
-    &:hover {
-        color: var(--blue-300);
-    }
+.area_btn button:first-child:hover {
+    color: var(--blue-300);
 }

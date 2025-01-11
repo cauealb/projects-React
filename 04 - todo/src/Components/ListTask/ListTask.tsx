@@ -47,8 +47,8 @@ export function ListTask ({content, id, isComplete, deleteTask, handleCompleteTa
 
                 <p className={isComplete ? styleList.content_risck : styleList.content_norisck}>{content}</p>
                 <div className={styleList.area_btn}>
-                    <span onClick={ChageTask}><PencilSimple size={20}/></span>
-                    <span onClick={handleClickDelete} ><Trash size={20} /></span> 
+                    <button onClick={ChageTask} disabled={disableEdit}><PencilSimple size={20}/></button>
+                    <button onClick={handleClickDelete} ><Trash size={20} /></button> 
                 </div>
             </div>
         </>
