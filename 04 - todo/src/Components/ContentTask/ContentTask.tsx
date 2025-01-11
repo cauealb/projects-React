@@ -15,9 +15,10 @@ interface HeaderProps {
     deleteTask: (id: number) => void
     completeTask: (id: number) => void
     handleNotCompleteTask: (id: number) => void
+    EditTask: (id: number) => void
 }
 
-export function ContentTask({task, deleteTask, completeTask, handleNotCompleteTask}: HeaderProps) {
+export function ContentTask({task, deleteTask, completeTask, handleNotCompleteTask, EditTask}: HeaderProps) {
     
     const [completedTasks, setCompletedTasks] = useState(task.length)
 
@@ -60,6 +61,7 @@ export function ContentTask({task, deleteTask, completeTask, handleNotCompleteTa
                                 handleCompleteTask={handleCompleteTask}
                                 handleNotCompleteTask={handleNotCompleteTask}
                                 NotCompletedTask={NotCompletedTask}
+                                EditTask={EditTask}
                             />
                         )
                     })

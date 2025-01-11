@@ -51,6 +51,20 @@ export function Header() {
         )
     }
 
+    function EditTask(id: number) {
+        const arrayEdit = task.filter((item) => item.id != id)
+        setTask(arrayEdit)
+
+        const arrayContent = task.map((item) => {
+            if(item.id === id) {
+                return item.content
+            }
+        })
+
+        const current = String(arrayContent)
+        setChangeTask(current)
+    }
+
     function handleNotCompleteTask(id: number) {
         setTask(
             task.map((item) => {
@@ -86,7 +100,13 @@ export function Header() {
                     </button>
                 </form>
             </header>
-            <ContentTask task={task} deleteTask={deleteTask} completeTask={MarkTaskWhithComplete} handleNotCompleteTask={handleNotCompleteTask}/>
+            <ContentTask 
+                task={task} 
+                deleteTask={deleteTask} 
+                completeTask={MarkTaskWhithComplete} 
+                handleNotCompleteTask={handleNotCompleteTask}
+                EditTask={EditTask}
+            />
         </>
     )
 }

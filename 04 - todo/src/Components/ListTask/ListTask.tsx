@@ -12,9 +12,10 @@ interface ListTaskProps {
     handleCompleteTask: (id: number) => void
     handleNotCompleteTask: (id: number) => void
     NotCompletedTask: () => void
+    EditTask: (id: number) => void
 }
 
-export function ListTask ({content, id, isComplete, deleteTask, handleCompleteTask, handleNotCompleteTask, NotCompletedTask}: ListTaskProps) {
+export function ListTask ({content, id, isComplete, deleteTask, handleCompleteTask, handleNotCompleteTask, NotCompletedTask, EditTask}: ListTaskProps) {
 
     function handleClickDelete() {
         deleteTask(id)
@@ -29,6 +30,12 @@ export function ListTask ({content, id, isComplete, deleteTask, handleCompleteTa
         handleNotCompleteTask(id)
     }
 
+    function ChageTask() {
+        EditTask(id)
+    }
+
+    const disableEdit = isComplete
+
     return (
         <>  
             <div className={styleList.content__task}>
@@ -40,8 +47,8 @@ export function ListTask ({content, id, isComplete, deleteTask, handleCompleteTa
 
                 <p className={isComplete ? styleList.content_risck : styleList.content_norisck}>{content}</p>
                 <div className={styleList.area_btn}>
-                    <span className={styleList.btn_remove}><PencilSimple size={20}/></span>
-                    <span className={styleList.btn_edit} onClick={handleClickDelete} ><Trash size={20} /></span>
+                    <span onClick={ChageTask}><PencilSimple size={20}/></span>
+                    <span onClick={handleClickDelete} ><Trash size={20} /></span> 
                 </div>
             </div>
         </>

@@ -32,14 +32,6 @@
     cursor: pointer;
 }
 
-/* .content__task span {
-    color: var(--gray-300);
-    cursor: pointer;
-    transition: color 0.2s linear;
-
-    
-} */
-
 .area_btn {
     display: flex;
     gap: 0.50rem;
