@@ -49,12 +49,16 @@ export function Header() {
     }
 
     function EditTask(id: number) {
-        const arrayContent = task.find((item) => item.id === id)
-        const current = arrayContent?.content || ''
-        setChangeTask(current)
+        if(!changeTask) {
+            const arrayContent = task.find((item) => item.id === id)
+            const current = arrayContent?.content || ''
+            setChangeTask(current)
 
-        const arrayEdit = task.filter((item) => item.id != id)
-        setTask(arrayEdit)
+            const arrayEdit = task.filter((item) => item.id != id)
+            setTask(arrayEdit)
+        } else {
+            alert('Existe uma tarefa sendo editada no momento!')
+        }
     }
 
     function handleNotCompleteTask(id: number) {
