@@ -48,10 +48,14 @@
     color: var(--gray-300);
 }
 
-.area_btn button:last-child:hover {
-    color: var(--red-500);
+.area_btn button:first-child:hover:not(:disabled) {
+    color: var(--blue-300);
 }
 
-.area_btn button:first-child:hover {
-    color: var(--blue-300);
+.area_btn button:first-child:disabled{
+    cursor: not-allowed;
+}
+
+.area_btn button:last-child:hover {
+    color: var(--red-500);
 }
