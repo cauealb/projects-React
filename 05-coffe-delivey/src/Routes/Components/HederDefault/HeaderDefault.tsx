@@ -1,6 +1,7 @@
 import logo from '../assets/Logo/Logo.svg'
 import { MapPin, ShoppingCart } from 'phosphor-react'
 import { HeaderStyle, HeaderStyleDiv, ParagraphStyle, PayStyle } from './HeaderDefaultStyle'
+import { Outlet } from 'react-router'
 
 export function HeaderDefault() {
     return (
@@ -13,6 +14,7 @@ export function HeaderDefault() {
                         <ShoppingCart size={20} color='#C47F17' weight='fill'/>
                     </PayStyle>
                 </HeaderStyleDiv>
+                <Outlet />
             </HeaderStyle>
         </>
     )
