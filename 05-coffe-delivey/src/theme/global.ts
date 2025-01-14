@@ -8,7 +8,7 @@ export const CSSGlobalDefault = createGlobalStyle`
     body {
         box-sizing: border-box;
         margin: 0;
-        padding: 0;
+        padding: 0; 
 
         font-size: 62.5%;
         font-family: 'Roboto', sans-serif
