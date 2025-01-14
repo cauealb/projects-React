@@ -1,12 +1,13 @@
 import { ThemeProvider } from "styled-components"
 import { ThemeGlobal } from "./theme/ThemeGlobal"
 import { CSSGlobalDefault } from "./theme/global"
+import { HeaderDefault } from "./HederDefault/HeaderDefault"
 
 export function App() {
    return (
     <>
       <ThemeProvider theme={ThemeGlobal}>
-        <h1>Hello Word</h1>
+        <HeaderDefault />
          <CSSGlobalDefault />
       </ThemeProvider>
     </>
