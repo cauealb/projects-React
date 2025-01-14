@@ -11,6 +11,6 @@ export const CSSGlobalDefault = createGlobalStyle`
         padding: 0;
 
         font-size: 62.5%;
-        font-family: sans-serif
+        font-family: 'Roboto', sans-serif
     }
 `
