@@ -6,7 +6,7 @@ export function HeaderDefault() {
     return (
         <>
             <HeaderStyle>
-                <img src={logo} alt="Logo Coffe Delivery" />
+                <a href="https://github.com/cauealb" target='-_blank'><img src={logo} alt="Logo Coffe Delivery" /></a>
                 <HeaderStyleDiv>
                     <ParagraphStyle> <MapPin size={22} color="#8047F8" weight="fill" /> Osasco, São Paulo</ParagraphStyle>
                     <PayStyle>
