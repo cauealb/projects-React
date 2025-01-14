@@ -1,4 +1,4 @@
-import logo from '../assets/Logo/Logo.svg'
+import logo from '../../../assets/Logo/Logo.svg'
 import { MapPin, ShoppingCart } from 'phosphor-react'
 import { HeaderStyle, HeaderStyleDiv, ParagraphStyle, PayStyle } from './HeaderDefaultStyle'
 import { Outlet } from 'react-router'
