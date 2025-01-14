@@ -8,12 +8,12 @@ export const HeaderStyle = styled.header`
     max-width: 1440px;
     margin: 1.2rem auto;
     padding: 1rem;
+    box-sizing: border-box;
 `;
 
 export const HeaderStyleDiv = styled.div`
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
 `;
 
@@ -23,12 +23,13 @@ export const ParagraphStyle = styled.p`
     font-size: 1.2rem;
     color: ${props => props.theme['--purple-800']};
     align-items: center;
-    padding: 0.30rem 0.50rem;
+    padding: 0.60rem 0.80rem;
     border-radius: 8px;
 `;
 
 export const PayStyle = styled.span`
-    padding: 0.30rem 0.50rem;
+    padding: 0.40rem 0.60rem;
     background-color: ${props => props.theme['--yellow-300']};
     border-radius: 8px;
+    margin-top: 1.2rem;
 `;
