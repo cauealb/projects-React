@@ -13,7 +13,9 @@ export function HeaderDefault() {
                 <HeaderStyleDiv>
                     <ParagraphStyle> <MapPin size={22} color="#8047F8" weight="fill" /> Osasco, São Paulo</ParagraphStyle>
                     <PayStyle>
-                        <ShoppingCart size={20} color='#C47F17' weight='fill'/>
+                        <NavLink to='/'>
+                            <ShoppingCart size={20} color='#C47F17' weight='fill'/>
+                        </NavLink>
                     </PayStyle>
                 </HeaderStyleDiv>
                 <Outlet />
