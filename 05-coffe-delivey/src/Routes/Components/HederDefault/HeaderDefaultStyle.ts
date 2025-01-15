@@ -25,6 +25,7 @@ export const ParagraphStyle = styled.p`
     align-items: center;
     padding: 0.60rem 0.80rem;
     border-radius: 8px;
+    cursor: pointer;
 `;
 
 export const PayStyle = styled.span`
@@ -32,4 +33,5 @@ export const PayStyle = styled.span`
     background-color: ${props => props.theme['--yellow-300']};
     border-radius: 8px;
     margin-top: 1.2rem;
+    cursor: pointer;
 `;
