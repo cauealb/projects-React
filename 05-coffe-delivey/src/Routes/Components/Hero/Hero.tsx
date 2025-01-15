@@ -1,6 +1,6 @@
 import { Coffee, Package, ShoppingCart, Timer } from "phosphor-react";
 import imgCoffe from '../../../assets/Logo/ImagemCoffe.svg'
-import { SectionPrincipal } from "./HeroStyle";
+import { SectionPrincipal, DivHeroInfosStyle } from "./HeroStyle";
 
 export function Hero() {
     return (
@@ -8,8 +8,10 @@ export function Hero() {
             <SectionPrincipal>
                 <img src={imgCoffe} alt="Café feito pela Coffe Delivery" />
                 <div>
-                    <h1>Encontre o café perfeito para qualquer hora do dia</h1>
-                    <p>Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</p>
+                    <DivHeroInfosStyle>
+                        <h1>Encontre o café perfeito para qualquer hora do dia</h1>
+                        <p>Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</p>
+                    </DivHeroInfosStyle>
                     <div>
                         <p>
                             <span><ShoppingCart size={10}/></span>

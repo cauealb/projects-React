@@ -9,10 +9,21 @@ export const SectionPrincipal = styled.section`
     margin: auto;
     padding: 0.75rem;
     box-sizing: border-box;
-
-    & h1 {
-      font-family: "Baloo 2", sans-serif;
-      font-size: 3rem;
-      margin-top: 0;
-    }
+    color: ${props => props.theme['--gray-800']};   
 `;
+
+export const DivHeroInfosStyle = styled.div`
+    line-height: 1.2;
+
+    & > h1 {
+        font-family: "Baloo 2", sans-serif;
+        color: ${props => props.theme['--gray-900']};
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    & > p {
+        font-size: 1.3rem;
+        margin: 0;
+    } 
+`
