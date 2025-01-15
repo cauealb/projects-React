@@ -26,4 +26,11 @@ export const DivHeroInfosStyle = styled.div`
         font-size: 1.3rem;
         margin: 0;
     } 
-`
+`;
+
+export const SpecificationDivStyle = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    font-size: 1.1rem;
+`;
