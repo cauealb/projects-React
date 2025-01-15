@@ -28,9 +28,23 @@ export const DivHeroInfosStyle = styled.div`
     } 
 `;
 
+const colorsSpecification = {
+    'yellow-dark': '--yellow-500',
+    'yellow-light': '--yellow-300',
+    'gray-dark': '--gray-900',
+    'purple-dark': '--purple-800',
+} as const
+
 export const SpecificationDivStyle = styled.div`
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
     font-size: 1.1rem;
+
+    & span {
+        border-radius: 50%;
+        display: inline-block; 
+        background-color: black;
+        padding: 1rem;
+    }
 `;
