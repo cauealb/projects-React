@@ -15,27 +15,19 @@ export function Hero() {
                     <SpecificationDivStyle>
                         <div>
                             <span><ShoppingCart size={10}/></span>
-                            <p>
-                                Compra simples e segura
-                            </p>
+                            <p>Compra simples e segura</p>
                         </div>
                         <div>
                             <span><Package size={10}/></span>
-                            <p>
-                                Embalagem mantém o café intacto
-                            </p>
+                            <p>Embalagem mantém o café intacto</p>
                         </div>
                         <div>
                             <span><Timer size={10}/></span>
-                            <p>
-                                Entrega rápida e rastreada
-                            </p>
+                            <p>Entrega rápida e rastreada</p>
                         </div>
-                        <div>
+                        <div>   
                             <span><Coffee size={10}/></span>
-                            <p>
-                                O café chega fresquinho até você
-                            </p>
+                            <p>O café chega fresquinho até você</p>
                         </div>
                     </SpecificationDivStyle>
                 </div>

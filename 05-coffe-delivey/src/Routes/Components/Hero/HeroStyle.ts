@@ -39,6 +39,7 @@ export const SpecificationDivStyle = styled.div`
     display: flex;
     flex-wrap: wrap;
     font-size: 0.85rem;
+    margin-top: 2rem;
 
     & span {
         border-radius: 50%;
@@ -51,7 +52,6 @@ export const SpecificationDivStyle = styled.div`
     & div {
         display: flex;
         align-items: center;
-        margin-bottom: 0;
         gap: 0.50rem;
         width: 40%
     }
