@@ -1,7 +1,8 @@
 import logo from '../../../assets/Logo/Logo.svg'
 import { MapPin, ShoppingCart } from 'phosphor-react'
 import { HeaderStyle, HeaderStyleDiv, ParagraphStyle, PayStyle } from './HeaderDefaultStyle'
-import { NavLink, Outlet } from 'react-router'
+import { NavLink } from 'react-router'
+import { Hero } from '../Hero/Hero'
 
 export function HeaderDefault() {
     return (
@@ -18,8 +19,8 @@ export function HeaderDefault() {
                         </NavLink>
                     </PayStyle>
                 </HeaderStyleDiv>
-                <Outlet />
             </HeaderStyle>
+            <Hero />
         </>
     )
 }
