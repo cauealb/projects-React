@@ -49,6 +49,10 @@ export const SpecificationDivStyle = styled.div`
     }
 
     & div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+        gap: 0.50rem;
         width: 40%
     }
 `;

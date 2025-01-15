@@ -14,26 +14,26 @@ export function Hero() {
                     </DivHeroInfosStyle>
                     <SpecificationDivStyle>
                         <div>
+                            <span><ShoppingCart size={10}/></span>
                             <p>
-                                <span><ShoppingCart size={10}/></span>
                                 Compra simples e segura
                             </p>
                         </div>
                         <div>
+                            <span><Package size={10}/></span>
                             <p>
-                                <span><Package size={10}/></span>
                                 Embalagem mantém o café intacto
                             </p>
                         </div>
                         <div>
+                            <span><Timer size={10}/></span>
                             <p>
-                                <span><Timer size={10}/></span>
                                 Entrega rápida e rastreada
                             </p>
                         </div>
                         <div>
+                            <span><Coffee size={10}/></span>
                             <p>
-                                <span><Coffee size={10}/></span>
                                 O café chega fresquinho até você
                             </p>
                         </div>
