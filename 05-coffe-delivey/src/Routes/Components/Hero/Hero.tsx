@@ -13,22 +13,30 @@ export function Hero() {
                         <p>Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</p>
                     </DivHeroInfosStyle>
                     <SpecificationDivStyle>
-                        <p>
-                            <span><ShoppingCart size={10}/></span>
-                            Compra simples e segura
-                        </p>
-                        <p>
-                            <span><Timer size={10}/></span>
-                            Entrega rápida e rastreada
-                        </p>
-                        <p>
-                            <span><Package size={10}/></span>
-                            Embalagem mantém o café intacto
-                        </p>
-                        <p>
-                            <span><Coffee size={10}/></span>
-                            O café chega fresquinho até você
-                        </p>
+                        <div>
+                            <p>
+                                <span><ShoppingCart size={10}/></span>
+                                Compra simples e segura
+                            </p>
+                        </div>
+                        <div>
+                            <p>
+                                <span><Package size={10}/></span>
+                                Embalagem mantém o café intacto
+                            </p>
+                        </div>
+                        <div>
+                            <p>
+                                <span><Timer size={10}/></span>
+                                Entrega rápida e rastreada
+                            </p>
+                        </div>
+                        <div>
+                            <p>
+                                <span><Coffee size={10}/></span>
+                                O café chega fresquinho até você
+                            </p>
+                        </div>
                     </SpecificationDivStyle>
                 </div>
             </SectionPrincipal>

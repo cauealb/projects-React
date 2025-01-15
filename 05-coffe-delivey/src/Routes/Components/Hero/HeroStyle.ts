@@ -38,13 +38,17 @@ const colorsSpecification = {
 export const SpecificationDivStyle = styled.div`
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
-    font-size: 1.1rem;
+    font-size: 0.85rem;
 
     & span {
         border-radius: 50%;
         display: inline-block; 
         background-color: black;
-        padding: 1rem;
+        padding: 0.40rem 0.50rem;
+        margin: 0;
+    }
+
+    & div {
+        width: 40%
     }
 `;
