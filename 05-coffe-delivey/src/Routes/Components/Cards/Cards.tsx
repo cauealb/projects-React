@@ -1,5 +1,13 @@
 import express from '../../../assets/SvgCoffe/Type=Expresso.svg'
-import { CardsStyle, NameCardStyle, DescriptionCoffeStyle, ImageCoffeStyle, FooterInputStyle, ButtonPayStyle, PriceStyleDiv } from './CardsStyle'
+import { CardsStyle, 
+          NameCardStyle, 
+          DescriptionCoffeStyle, 
+          ImageCoffeStyle, 
+          FooterInputStyle, 
+          ButtonPayStyle, 
+          PriceStyleDiv,
+          InputQTDStyle        
+} from './CardsStyle'
 import { ShoppingCart } from 'phosphor-react'
 
 export function Cards() {
@@ -19,7 +27,7 @@ export function Cards() {
                         <span>r$</span>
                         <p>9,90</p>
                     </PriceStyleDiv>
-                    <input type="number" min={1}/>
+                    <InputQTDStyle type="number" min={1}/>
                     <ButtonPayStyle><ShoppingCart size={30} color='#fff' weight='fill'/></ButtonPayStyle>
                 </FooterInputStyle>
             </CardsStyle>

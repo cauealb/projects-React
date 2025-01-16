@@ -75,6 +75,17 @@ export const PriceStyleDiv = styled.div`
     }
 `;
 
+export const InputQTDStyle = styled.input`
+    width: 20%;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background-color: ${props => props.theme['--gray-400']};
+    box-sizing: border-box;
+    padding: 0.50rem;
+    text-align: center;
+`;
+
 export const ButtonPayStyle = styled.button`
     display: flex;
     align-items: center;
