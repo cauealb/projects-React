@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import imgbc from '../../../assets/Logo/background-img.png'
 
 export const SectionPrincipal = styled.section`
     display: flex;
@@ -10,6 +11,11 @@ export const SectionPrincipal = styled.section`
     padding: 0.75rem;
     box-sizing: border-box;
     color: ${props => props.theme['--gray-800']};   
+`;
+
+export const WapperStyled = styled.div`
+    background: url(${imgbc});
+    width: 100%
 `;
 
 export const DivHeroInfosStyle = styled.div`
@@ -35,12 +41,13 @@ export const SpecificationDivStyle = styled.div`
     font-size: 1rem;
     margin: 0;
     padding: 0;
+    gap: 0.50rem;
 
     & div {
         display: flex;
         align-items: center;
         gap: 0.50rem;
-        width: 40%
+        width: 40%;
     }
 `;
 
