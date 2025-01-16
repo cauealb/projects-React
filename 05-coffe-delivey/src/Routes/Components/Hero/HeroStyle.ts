@@ -35,7 +35,16 @@ const colorsSpecification = {
     'purple-dark': '--purple-800',
 } as const
 
-export const SpecificationDivStyle = styled.div`
+const colorsInfos = {
+    yellow: '--yellow-300',
+    gray: '--gray-900'
+} as const 
+
+interface PropsInfos {
+    color: keyof typeof colorsInfos
+}
+
+export const SpecificationDivStyle = styled.div<PropsInfos>`
     display: flex;
     flex-wrap: wrap;
     font-size: 0.85rem;
