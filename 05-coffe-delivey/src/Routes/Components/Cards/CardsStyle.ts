@@ -16,7 +16,9 @@ export const CardsStyle = styled.div`
     position: relative;
 `;
 
-
+export const ImageCoffeStyle = styled.img`
+    margin: -30px 0 0 0;
+`;
 
 export const NameCardStyle = styled.p`
     font-size: 0.80rem;

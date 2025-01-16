@@ -1,12 +1,12 @@
 import express from '../../../assets/SvgCoffe/Type=Expresso.svg'
-import { CardsStyle, NameCardStyle, DescriptionCoffeStyle } from './CardsStyle'
+import { CardsStyle, NameCardStyle, DescriptionCoffeStyle, ImageCoffeStyle } from './CardsStyle'
 
 export function Cards() {
     return (
         <>
             <CardsStyle>
                 <header>
-                    <img src={express} />
+                    <ImageCoffeStyle src={express} />
                 </header>
                 <NameCardStyle>Tradicional</NameCardStyle>
                 <DescriptionCoffeStyle>
