@@ -51,6 +51,21 @@ export const DescriptionCoffeStyle = styled.div`
 
 export const FooterInputStyle = styled.footer`
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* & > div:last-child {
+        
+        width: fit-content;
+        
+    } */
+`;
+
+export const InputQTDPay = styled.div`
+    display: flex;
+    background-color: yellow;
+    width: 1rem;
+    gap: 0.30rem;
 `;
 
 export const PriceStyleDiv = styled.div`

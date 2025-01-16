@@ -6,7 +6,8 @@ import { CardsStyle,
           FooterInputStyle, 
           ButtonPayStyle, 
           PriceStyleDiv,
-          InputQTDStyle        
+          InputQTDStyle,
+          InputQTDPay        
 } from './CardsStyle'
 import { ShoppingCart } from 'phosphor-react'
 
@@ -27,8 +28,10 @@ export function Cards() {
                         <span>r$</span>
                         <p>9,90</p>
                     </PriceStyleDiv>
-                    <InputQTDStyle type="number" min={1}/>
-                    <ButtonPayStyle><ShoppingCart size={30} color='#fff' weight='fill'/></ButtonPayStyle>
+                    <InputQTDPay>
+                        <InputQTDStyle type="number" min={1}/>
+                        <ButtonPayStyle><ShoppingCart size={30} color='#fff' weight='fill'/></ButtonPayStyle>
+                    </InputQTDPay>
                 </FooterInputStyle>
             </CardsStyle>
         </>
