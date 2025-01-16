@@ -33,6 +33,7 @@ export const SpecificationDivStyle = styled.div`
     flex-wrap: wrap;
     font-size: 0.85rem;
     margin-top: 2rem;
+    gap: 0.75rem;
 
     & div {
         display: flex;
