@@ -48,3 +48,7 @@ export const DescriptionCoffeStyle = styled.div`
         font-size: 0.90rem;
     }
 `;
+
+export const FooterInputStyle = styled.footer`
+    display: flex;
+`;

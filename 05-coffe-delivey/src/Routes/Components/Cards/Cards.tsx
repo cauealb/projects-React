@@ -1,5 +1,5 @@
 import express from '../../../assets/SvgCoffe/Type=Expresso.svg'
-import { CardsStyle, NameCardStyle, DescriptionCoffeStyle, ImageCoffeStyle } from './CardsStyle'
+import { CardsStyle, NameCardStyle, DescriptionCoffeStyle, ImageCoffeStyle, FooterInputStyle } from './CardsStyle'
 import { ShoppingCart } from 'phosphor-react'
 
 export function Cards() {
@@ -14,14 +14,14 @@ export function Cards() {
                     <h3>Expresso Tradicional</h3>
                     <p>O tradicional café feito com água quente e grãos moídos</p>
                 </DescriptionCoffeStyle>
-                <footer>
+                <FooterInputStyle>
                     <div>
                         <span>r$</span>
                         <p>R$9,90</p>
                     </div>
                     <input type="number" min={1}/>
                     <button><ShoppingCart size={30} color='#fff' weight='fill'/></button>
-                </footer>
+                </FooterInputStyle>
             </CardsStyle>
         </>
     )
