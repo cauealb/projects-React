@@ -1,5 +1,5 @@
 import express from '../../../assets/SvgCoffe/Type=Expresso.svg'
-import { CardsStyle, NameCardStyle } from './CardsStyle'
+import { CardsStyle, NameCardStyle, DescriptionCoffeStyle } from './CardsStyle'
 
 export function Cards() {
     return (
@@ -9,10 +9,10 @@ export function Cards() {
                     <img src={express} />
                 </header>
                 <NameCardStyle>Tradicional</NameCardStyle>
-                <div>
+                <DescriptionCoffeStyle>
                     <h3>Expresso Tradicional</h3>
                     <p>O tradicional café feito com água quente e grãos moídos</p>
-                </div>
+                </DescriptionCoffeStyle>
                 <footer>
                     <p>R$9,90</p>
                     <input type="number" />
