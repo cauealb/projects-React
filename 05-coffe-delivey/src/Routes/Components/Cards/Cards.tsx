@@ -1,9 +1,10 @@
 import express from '../../../assets/SvgCoffe/Type=Expresso.svg'
+import { CardsStyle } from './CardsStyle'
 
 export function Cards() {
     return (
         <>
-            <div>
+            <CardsStyle>
                 <header>
                     <img src={express} />
                 </header>
@@ -17,7 +18,7 @@ export function Cards() {
                     <input type="number" />
                     <button>Enviar</button>
                 </footer>
-            </div>
+            </CardsStyle>
         </>
     )
 }
