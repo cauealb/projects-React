@@ -14,6 +14,7 @@ export const SectionPrincipal = styled.section`
 
 export const DivHeroInfosStyle = styled.div`
     line-height: 1.2;
+    margin-bottom: 5.5rem;
 
     & > h1 {
         font-family: "Baloo 2", sans-serif;
@@ -31,9 +32,9 @@ export const DivHeroInfosStyle = styled.div`
 export const SpecificationDivStyle = styled.div`
     display: flex;
     flex-wrap: wrap;
-    font-size: 0.85rem;
-    margin-top: 2rem;
-    gap: 0.75rem;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
 
     & div {
         display: flex;
