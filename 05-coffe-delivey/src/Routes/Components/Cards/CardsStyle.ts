@@ -15,3 +15,13 @@ export const CardsStyle = styled.div`
     margin: 2rem auto;
     position: relative;
 `;
+
+
+
+export const NameCardStyle = styled.p`
+    font-size: 0.80rem;
+    color: ${props => props.theme['--yellow-800']};
+    background-color: ${props => props.theme['--yellow-300']};
+    border-radius: 8px;
+    padding: 0.20rem 0.35rem;
+`;
