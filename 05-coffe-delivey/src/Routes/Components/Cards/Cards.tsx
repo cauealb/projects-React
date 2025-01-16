@@ -1,6 +1,6 @@
 import express from '../../../assets/SvgCoffe/Type=Expresso.svg'
 
-export default function Cards() {
+export function Cards() {
     return (
         <>
             <div>

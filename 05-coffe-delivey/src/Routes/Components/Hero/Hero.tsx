@@ -1,6 +1,7 @@
 import { Coffee, Package, ShoppingCart, Timer } from "phosphor-react";
 import imgCoffe from '../../../assets/Logo/ImagemCoffe.svg'
 import { SectionPrincipal, DivHeroInfosStyle, SpecificationDivStyle, IconsSpecificationStyle, WapperStyled } from "./HeroStyle";
+import { Cards } from "../Cards/Cards";
 
 export function Hero() {
     return (
@@ -34,6 +35,7 @@ export function Hero() {
                 </div>
             </SectionPrincipal>
         </WapperStyled>
+        <Cards />
         </>
     )
 }
