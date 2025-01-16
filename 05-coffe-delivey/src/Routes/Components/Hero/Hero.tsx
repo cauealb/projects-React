@@ -18,11 +18,11 @@ export function Hero() {
                             <p>Compra simples e segura</p>
                         </div>
                         <div>
-                            <IconsSpecificationStyle color="yellow"><Package size={10}/></IconsSpecificationStyle>
+                            <IconsSpecificationStyle color="gray"><Package size={10}/></IconsSpecificationStyle>
                             <p>Embalagem mantém o café intacto</p>
                         </div>
                         <div>
-                            <IconsSpecificationStyle color="gray"><Timer size={10}/></IconsSpecificationStyle>
+                            <IconsSpecificationStyle color="yellow"><Timer size={10}/></IconsSpecificationStyle>
                             <p>Entrega rápida e rastreada</p>
                         </div>
                         <div>   

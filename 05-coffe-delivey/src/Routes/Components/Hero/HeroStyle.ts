@@ -43,9 +43,9 @@ export const SpecificationDivStyle = styled.div`
 `;
 
 const colorsInfos = {
-    yellow: '--yellow-300',
-    yellow2: '--yellow-500',
-    gray: '--gray-900',
+    yellow: '--yellow-500',
+    yellow2: '--yellow-800',
+    gray: '--gray-700',
     purple: '--purple-500'
 } as const 
 
