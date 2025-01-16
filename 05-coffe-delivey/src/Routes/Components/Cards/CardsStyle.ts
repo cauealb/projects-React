@@ -52,3 +52,17 @@ export const DescriptionCoffeStyle = styled.div`
 export const FooterInputStyle = styled.footer`
     display: flex;
 `;
+
+export const ButtonPayStyle = styled.button`
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background-color: ${props => props.theme['--purple-800']};
+    border-radius: 8px;
+    transition: background-color 0.2s linear;
+
+    &:hover {
+        background-color: ${props => props.theme['--purple-500']}
+    }
+`;
