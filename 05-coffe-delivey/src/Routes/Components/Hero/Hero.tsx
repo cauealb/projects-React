@@ -14,19 +14,19 @@ export function Hero() {
                     </DivHeroInfosStyle>
                     <SpecificationDivStyle>
                         <div>
-                            <IconsSpecificationStyle color=""><ShoppingCart size={10}/></IconsSpecificationStyle>
+                            <IconsSpecificationStyle color="yellow2"><ShoppingCart size={10}/></IconsSpecificationStyle>
                             <p>Compra simples e segura</p>
                         </div>
                         <div>
-                            <IconsSpecificationStyle color=""><Package size={10}/></IconsSpecificationStyle>
+                            <IconsSpecificationStyle color="yellow"><Package size={10}/></IconsSpecificationStyle>
                             <p>Embalagem mantém o café intacto</p>
                         </div>
                         <div>
-                            <IconsSpecificationStyle color=""><Timer size={10}/></IconsSpecificationStyle>
+                            <IconsSpecificationStyle color="gray"><Timer size={10}/></IconsSpecificationStyle>
                             <p>Entrega rápida e rastreada</p>
                         </div>
                         <div>   
-                            <IconsSpecificationStyle color=""><Coffee size={10}/></IconsSpecificationStyle>
+                            <IconsSpecificationStyle color="purple"><Coffee size={10}/></IconsSpecificationStyle>
                             <p>O café chega fresquinho até você</p>
                         </div>
                     </SpecificationDivStyle>

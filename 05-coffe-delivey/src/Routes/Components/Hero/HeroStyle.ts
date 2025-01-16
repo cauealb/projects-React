@@ -42,10 +42,11 @@ export const SpecificationDivStyle = styled.div`
     }
 `;
 
-
 const colorsInfos = {
     yellow: '--yellow-300',
-    gray: '--gray-900'
+    yellow2: '--yellow-500',
+    gray: '--gray-900',
+    purple: '--purple-500'
 } as const 
 
 interface PropsInfos {
