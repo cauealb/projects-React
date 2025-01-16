@@ -53,6 +53,28 @@ export const FooterInputStyle = styled.footer`
     display: flex;
 `;
 
+export const PriceStyleDiv = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: fit-content;
+    gap: 0.20rem;
+    color: ${props => props.theme['--gray-800']};
+
+    & > span {
+        text-transform: uppercase;
+        margin-bottom: 0.65rem;
+        font-size: 0.80rem;
+    }
+
+    & > p {
+        font-size: 1.6rem;
+        margin: 0;
+        font-weight: bold;
+        font-family: 'Baloo 2', sans-serif;
+    }
+`;
+
 export const ButtonPayStyle = styled.button`
     display: flex;
     align-items: center;
