@@ -59,4 +59,5 @@ export const IconsSpecificationStyle = styled.span<PropsInfos>`
         background-color: black;
         padding: 0.40rem 0.50rem;
         margin: 0;
+        background-color: ${props => props.theme[colorsInfos[props.color]]}
 `;
