@@ -28,12 +28,20 @@ export const DivHeroInfosStyle = styled.div`
     } 
 `;
 
-const colorsSpecification = {
-    'yellow-dark': '--yellow-500',
-    'yellow-light': '--yellow-300',
-    'gray-dark': '--gray-900',
-    'purple-dark': '--purple-800',
-} as const
+export const SpecificationDivStyle = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    margin-top: 2rem;
+
+    & div {
+        display: flex;
+        align-items: center;
+        gap: 0.50rem;
+        width: 40%
+    }
+`;
+
 
 const colorsInfos = {
     yellow: '--yellow-300',
@@ -44,24 +52,10 @@ interface PropsInfos {
     color: keyof typeof colorsInfos
 }
 
-export const SpecificationDivStyle = styled.div<PropsInfos>`
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 0.85rem;
-    margin-top: 2rem;
-
-    & span {
-        border-radius: 50%;
+export const IconsSpecificationStyle = styled.span<PropsInfos>`
+    border-radius: 50%;
         display: inline-block; 
         background-color: black;
         padding: 0.40rem 0.50rem;
         margin: 0;
-    }
-
-    & div {
-        display: flex;
-        align-items: center;
-        gap: 0.50rem;
-        width: 40%
-    }
 `;
