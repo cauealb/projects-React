@@ -55,9 +55,10 @@ interface PropsInfos {
 
 export const IconsSpecificationStyle = styled.span<PropsInfos>`
     border-radius: 50%;
-        display: inline-block; 
-        background-color: black;
-        padding: 0.40rem 0.50rem;
-        margin: 0;
-        background-color: ${props => props.theme[colorsInfos[props.color]]}
+    display: flex;
+    align-items: center; 
+    background-color: black;
+    padding: 0.50rem;
+    margin: 0;
+    background-color: ${props => props.theme[colorsInfos[props.color]]}
 `;
