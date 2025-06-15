@@ -1,9 +1,12 @@
-import useHeader from "./useHeader"
+import { useContext } from 'react'
 import logo from '../../assets/Logo.svg'
 import logoTitle from '../../assets/ToDo List.svg'
 import './style/Header.css'
+import { Context } from '../../AppContext/AppContext'
 
 export default function Header() {
+    const {  } = useContext(Context)
+
     return(
         <header class="hero">
             <div class="nameCompany">

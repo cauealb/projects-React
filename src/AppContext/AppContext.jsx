@@ -1,10 +1,24 @@
 import { createContext } from "react";
-const Provider = createContext()
+import useHeader from "../components/Header/useHeader";
+
+export const Context = createContext({
+    taskFinish: 0,
+    setTaskFinish: () => {},
+    setTaskFinish: () => {}
+})
 
 export default function AppContext({ children }) {
+    const { taskFinish, setTaskFinish, handleTaskFinish } = useHeader()
+    
     return (
-        <Provider value={0}>
+        <Context.Provider value={
+            {
+                taskFinish, 
+                setTaskFinish,
+                handleTaskFinish
+            }
+        }>
             {children}
-        </Provider>
+        </Context.Provider>
     )
 }

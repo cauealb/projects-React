@@ -7,9 +7,9 @@ export default function useHeader() {
         setTaskFinish(state => state + 1)
     }
 
-    return (
+    return {
         taskFinish,
         setTaskFinish,
         handleTaskFinish
-    )
+    }
 }
