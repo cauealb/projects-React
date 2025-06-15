@@ -16,6 +16,12 @@
     --pink-base: #C257A4;
     --pink-dark: #884074;
 
+    /* Fonts: Cairo */
+    --cairo: "Cairo", sans-serif;
+
+    --body-md-regular: 400 16px/24px var(--cairo);
+    --body-md-semibold: 600 16px/24px var(--cairo);
+    --body-sm-semibold: 600 14px/20px var(--cairo);
 }
 
 * {
