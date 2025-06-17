@@ -1,0 +1,12 @@
+.hero {
+    margin-top: 3em;
+    display: block;
+    background-color: yellow;
+    min-width: 31em;
+}
+
+.nameCompany {
+    display: flex;
+    justify-content: space;
+    gap: 1em;
+}
