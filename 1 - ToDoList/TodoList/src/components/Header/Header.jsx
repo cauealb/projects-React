@@ -13,7 +13,7 @@ export default function Header() {
                 <img src={logo} alt="Logo do ToDoList" />
                 <img src={logoTitle} alt="Nome da Empresa" />
             </div>
-            <div>
+            <div class="infosTask">
                 <div class="taskCreate">
                     <p>Tarefas criadas</p>
                     <p>{taskFinish}</p>    

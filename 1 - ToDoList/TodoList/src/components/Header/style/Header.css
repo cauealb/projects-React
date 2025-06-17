@@ -3,10 +3,24 @@
     display: block;
     background-color: yellow;
     min-width: 31em;
+    padding-inline: 1em;
 }
 
 .nameCompany {
     display: flex;
     justify-content: space;
     gap: 1em;
+    margin-bottom: 2em;
+}
+
+.infosTask {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.infosTask div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
