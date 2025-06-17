@@ -37,7 +37,7 @@
 
 .inputTask input {
     flex-grow: 1;
-    padding: 0.80em;
+    padding: 0.50em;
     border: none;
     border-bottom: 1px solid var(--pink-base);
     background-color: transparent;
