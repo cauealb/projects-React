@@ -5,7 +5,7 @@ import useNewTask from "../components/NewTask/useNewTask";
 export const Context = createContext({
     taskFinish: 0,
     handleTaskFinish: () => {},
-    newTask: false,
+    newTask: true,
     handleCreateNewTask: () => {}
 })
 

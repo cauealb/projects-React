@@ -1,4 +1,4 @@
-import { PlusIcon } from "@phosphor-icons/react";
+import { PlusIcon, XIcon, CheckIcon } from "@phosphor-icons/react";
 import './style/NewTask.css';
 import { useContext } from "react";
 import { Context } from "../../AppContext/AppContext";
@@ -14,6 +14,14 @@ export default function NewTask() {
         </button>
     )
     } else {
-
+        return (
+            <div>
+                <input type="text" class="inputTask" />
+                <div>
+                    <XIcon />
+                    <CheckIcon />
+                </div>
+            </div>
+        )
     }
 }
