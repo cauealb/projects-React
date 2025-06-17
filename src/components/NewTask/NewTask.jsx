@@ -18,8 +18,8 @@ export default function NewTask() {
             <div class="inputTask">
                 <input type="text" />
                 <div>
-                    <XIcon />
-                    <CheckIcon />
+                    <XIcon size={27} class="XIcon" color="#C257A4" />
+                    <CheckIcon size={27} class="CheckIcon" color="#fff" />
                 </div>
             </div>
         )

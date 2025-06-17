@@ -27,16 +27,33 @@
     display: flex;
     align-items: center;
     width: 100%;
+    margin-block: 0.70em;
     background-color: var(--gray-100);
-    /* padding: 1em; */
     box-sizing: border-box;
+    padding: 0.50em;
 }
 
 .inputTask input {
     flex-grow: 1;
     padding: 0.80em;
     border: none;
-    border-bottom: 4px solid black;
+    border-bottom: 1px solid var(--pink-base);
     background-color: transparent;
     outline: none;
+    font-size: 1em;
+    color: var(--gray-400);
+}
+
+.XIcon {
+    background-color: var(--gray-200);
+    padding: 0.20em;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.CheckIcon {
+    background-color: var(--green-base);
+    padding: 0.20em;
+    border-radius: 8px;
+    cursor: pointer;
 }
