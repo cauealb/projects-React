@@ -5,7 +5,7 @@ export default function NewTask() {
     return (
         <button class="newTask">
             <PlusIcon color="#C257A4" size={20} />
-            Nova tarefa
+            <p>Nova tarefa</p>
         </button>
     )
 }

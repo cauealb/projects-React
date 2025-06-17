@@ -8,3 +8,8 @@
     width: 100%;
     padding: 1em;
 }
+
+.newTask p {
+    color: var(--gray-400);
+    font: var(--body-md-semibold)
+}
