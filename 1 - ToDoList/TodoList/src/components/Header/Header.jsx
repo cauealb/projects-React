@@ -5,13 +5,13 @@ import './style/Header.css'
 import { Context } from '../../AppContext/AppContext'
 
 export default function Header() {
-    const { taskFinish, setTaskFinish } = useContext(Context)
+    const { taskFinish, handleTaskFinish } = useContext(Context)
 
     return(
         <header class="hero">
             <div class="nameCompany">
                 <img src={logo} alt="Logo do ToDoList" />
-                <img src={logoTitle} />
+                <img src={logoTitle} alt="Nome da Empresa" />
             </div>
             <div>
                 <div class="taskCreate">
