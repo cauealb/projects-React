@@ -4,11 +4,11 @@ import { useContext } from "react";
 import { Context } from "../../AppContext/AppContext";
 
 export default function NewTask() {
-    const { newTask } = useContext(Context)
+    const { newTask, handleCreateNewTask } = useContext(Context)
 
     if(!newTask) {
         return (
-        <button class="newTask">
+        <button onClick={handleCreateNewTask} class="newTask">
             <PlusIcon color="#C257A4" size={20} />
             <p>Nova tarefa</p>
         </button>
@@ -18,7 +18,7 @@ export default function NewTask() {
             <div class="inputTask">
                 <input type="text" />
                 <div>
-                    <XIcon size={27} class="XIcon" color="#C257A4" />
+                    <XIcon onClick={handleCreateNewTask} size={27} class="XIcon" color="#C257A4" />
                     <CheckIcon size={27} class="CheckIcon" color="#fff" />
                 </div>
             </div>

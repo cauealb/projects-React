@@ -26,6 +26,7 @@
 .inputTask {
     display: flex;
     align-items: center;
+    gap: 1em;
     width: 100%;
     margin-block: 0.70em;
     background-color: var(--gray-100);
