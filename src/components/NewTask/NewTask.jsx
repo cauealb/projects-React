@@ -15,8 +15,8 @@ export default function NewTask() {
     )
     } else {
         return (
-            <div>
-                <input type="text" class="inputTask" />
+            <div class="inputTask">
+                <input type="text" />
                 <div>
                     <XIcon />
                     <CheckIcon />
