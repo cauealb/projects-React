@@ -3,10 +3,41 @@
     display: block;
     background-color: yellow;
     min-width: 31em;
+    padding-inline: 1em;
 }
 
 .nameCompany {
     display: flex;
     justify-content: space;
     gap: 1em;
+    margin-bottom: 2em;
+}
+
+.infosTask {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.infosTask div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.40em;
+    color: var(--gray-300);
+    font: var(--body-md-regular);
+}
+
+.taskCreate p:last-child {
+    background-color: var(--pink-light);
+    color: var(--pink-dark);
+    padding: 0.10em 0.50em;
+    border-radius: 50%;
+}
+
+.taskFinish p:last-child {
+    background-color: var(--green-light);
+    color: var(--green-dark);
+    padding: 0.10em 0.50em;
+    border-radius: 50%;
 }

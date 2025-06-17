@@ -9,7 +9,6 @@ export default function useHeader() {
 
     return {
         taskFinish,
-        setTaskFinish,
         handleTaskFinish
     }
 }
