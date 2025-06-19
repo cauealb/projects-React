@@ -14,7 +14,10 @@ export default function App() {
         <NewTask />
 
         {listTasks.map(item => (
-          <Task />
+          <Task 
+            text={item.text}
+            finish={item.finish}
+          />
         ))}
       </div>
     </AppContext>

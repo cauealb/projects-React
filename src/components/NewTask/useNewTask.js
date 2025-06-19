@@ -11,10 +11,12 @@ export default function useNewTask() {
 
     function handleNewTask() {
         const newTask = {
-            id: new Date().getTime,
+            id: new Date().getTime(),
             text: 'blablabla',
             finish: false
         }
+
+        console.log(newTask)
 
         setListTasks(state => [...state, newTask])
     }
