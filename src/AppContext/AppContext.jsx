@@ -9,6 +9,10 @@ export const Context = createContext({
     handleCreateNewTask: () => {},
     listTasks: [],
     handleNewTask: () => {},
+    taskCreated: 0,
+    completedTask: 0,
+    incrementTask: () => {},
+    incrementCompletedTask: () => {}
 })
 
 export default function AppContext({ children }) {

@@ -14,6 +14,8 @@ export default function useHeader() {
     }
 
     return {
+        taskCreated,
+        completedTask,
         incrementTask,
         incrementCompletedTask
     }
