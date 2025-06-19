@@ -6,10 +6,12 @@ import Task from "./components/Task/Task";
 export default function App() {
   return(
     <AppContext>
-      <Header />
-      <NewTask />
+      <div class="space">
+        <Header />
+        <NewTask />
 
-      <Task />
+        <Task />
+      </div>
     </AppContext>
   )
 }

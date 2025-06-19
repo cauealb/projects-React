@@ -1,0 +1,12 @@
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.task p {
+    margin-inline: 0.80em;
+    flex-grow: 1;
+    font: var(--body-md-semibold)
+}
