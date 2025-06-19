@@ -20,7 +20,7 @@ export default function Header() {
                 </div>
                 <div class="taskFinish">
                     <p>Concluídas</p>
-                    <p>{completedTask}</p>  
+                    <p>{`${completedTask} de ${taskCreated}`}</p>  
                 </div>
             </div>
         </header>
