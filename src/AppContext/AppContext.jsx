@@ -1,6 +1,6 @@
 import { createContext } from "react";
-import useHeader from "../components/Header/useHeader";
 import useNewTask from "../components/NewTask/useNewTask";
+import Task from "../components/Task/Task";
 
 export const Context = createContext({
     taskFinish: 0,
@@ -10,7 +10,7 @@ export const Context = createContext({
 })
 
 export default function AppContext({ children }) {
-    const { taskFinish, handleTaskFinish } = useHeader()
+    const { taskFinish, handleTaskFinish } = Task()
     const { newTask, handleCreateNewTask } = useNewTask()
     
     return (
