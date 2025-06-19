@@ -9,7 +9,7 @@
     border-radius: 8px;
 }
 
-.task p {
+.task p, .task s {
     margin-inline: 0.80em;
     flex-grow: 1;
     font: var(--body-md-semibold)

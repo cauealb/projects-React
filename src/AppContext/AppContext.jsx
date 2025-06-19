@@ -1,6 +1,6 @@
 import { createContext } from "react";
 import useNewTask from "../components/NewTask/useNewTask";
-import Task from "../components/Task/Task";
+import useTask from "../components/Task/useTask";
 
 export const Context = createContext({
     taskFinish: 0,
@@ -10,9 +10,9 @@ export const Context = createContext({
 })
 
 export default function AppContext({ children }) {
-    const { taskFinish, handleTaskFinish } = Task()
+    const { taskFinish, handleTaskFinish } = useTask()
     const { newTask, handleCreateNewTask } = useNewTask()
-    
+
     return (
         <Context.Provider value={
             {
