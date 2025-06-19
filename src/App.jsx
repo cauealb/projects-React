@@ -11,6 +11,10 @@ export default function App() {
         <NewTask />
 
         <Task />
+        <Task />
+        <Task />
+        <Task />
+        <Task />
       </div>
     </AppContext>
   )
