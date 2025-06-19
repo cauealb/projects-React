@@ -5,7 +5,7 @@ import './style/Header.css'
 import { Context } from '../../AppContext/AppContext'
 
 export default function Header() {
-    const { taskFinish, handleTaskFinish } = useContext(Context)
+    const { taskCreated, completedTask } = useContext(Context)
 
     return(
         <header class="hero">
@@ -16,11 +16,11 @@ export default function Header() {
             <div class="infosTask">
                 <div class="taskCreate">
                     <p>Tarefas criadas</p>
-                    <p>{taskFinish}</p>    
+                    <p>{taskCreated}</p>    
                 </div>
                 <div class="taskFinish">
                     <p>Concluídas</p>
-                    <p>0</p>  
+                    <p>{completedTask}</p>  
                 </div>
             </div>
         </header>
