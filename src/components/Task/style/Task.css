@@ -3,10 +3,19 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    box-sizing: border-box;
+    padding: 1em;
+    background-color: var(--gray-100);
+    border-radius: 8px;
 }
 
 .task p {
     margin-inline: 0.80em;
     flex-grow: 1;
     font: var(--body-md-semibold)
+}
+
+.task div {
+    display: flex;
+    gap: 0.80em;
 }
