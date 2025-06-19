@@ -2,11 +2,7 @@ import { useState } from "react"
 
 
 export default function useNewTask() {
-    const [listTasks, setListTasks] = useState([{
-        id: new Date().getTime(),
-        text: 'blablabla',
-        finish: false
-    }])
+    const [listTasks, setListTasks] = useState([])
     const [newTask, setNewTask] = useState(false)
     
     function handleCreateNewTask() {

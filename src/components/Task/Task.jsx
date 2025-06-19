@@ -9,8 +9,8 @@ export default function Task({text, finish}) {
     return(
         <div class="task">
             <input onClick={handleTaskFinish} type="checkbox" />
-            {finish ? <p>{text}</p>
-             : <s>{text}</s>}
+            {finish ? <s>{text}</s>
+             : <p>{text}</p>}
             <div>
                 <TrashIcon class="TrashIcon" size={17} color="#7A6E76" />
                 <PencilIcon class="PencilIcon" size={17} color="#7A6E76" />
