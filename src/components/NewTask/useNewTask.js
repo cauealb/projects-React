@@ -22,6 +22,8 @@ export default function useNewTask() {
     return {
         newTask,
         handleCreateNewTask,
+        handleNewTask,
+        listTasks,
         handleNewTask
     }
 }

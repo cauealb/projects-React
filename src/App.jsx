@@ -1,20 +1,21 @@
 import Header from "./components/Header/Header";
 import NewTask from "./components/NewTask/NewTask"
-import AppContext from "./AppContext/AppContext";
+import AppContext, { Context } from "./AppContext/AppContext";
 import Task from "./components/Task/Task";
+import { useContext } from "react";
 
 export default function App() {
+  const { listTasks } = useContext(Context)
+
   return(
     <AppContext>
       <div class="space">
         <Header />
         <NewTask />
 
-        <Task />
-        <Task />
-        <Task />
-        <Task />
-        <Task />
+        {listTasks.map(item => (
+          <Task />
+        ))}
       </div>
     </AppContext>
   )
