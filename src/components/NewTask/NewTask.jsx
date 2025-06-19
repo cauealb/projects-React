@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { Context } from "../../AppContext/AppContext";
 
 export default function NewTask() {
-    const { newTask, handleCreateNewTask } = useContext(Context)
+    const { newTask, handleCreateNewTask, handleNewTask } = useContext(Context)
 
     if(!newTask) {
         return (
@@ -19,7 +19,7 @@ export default function NewTask() {
                 <input type="text" />
                 <div>
                     <XIcon onClick={handleCreateNewTask} size={27} class="XIcon" color="#C257A4" />
-                    <CheckIcon size={27} class="CheckIcon" color="#fff" />
+                    <CheckIcon onClick={handleNewTask} size={27} class="CheckIcon" color="#fff" />
                 </div>
             </div>
         )

@@ -5,13 +5,14 @@ import useTask from "../components/Task/useTask";
 export const Context = createContext({
     taskFinish: 0,
     handleTaskFinish: () => {},
+    handleNewTask: () => {},
     newTask: false,
     handleCreateNewTask: () => {}
 })
 
 export default function AppContext({ children }) {
     const { taskFinish, handleTaskFinish } = useTask()
-    const { newTask, handleCreateNewTask } = useNewTask()
+    const { newTask, handleCreateNewTask, handleNewTask} = useNewTask()
 
     return (
         <Context.Provider value={
@@ -19,7 +20,8 @@ export default function AppContext({ children }) {
                 taskFinish, 
                 handleTaskFinish,
                 newTask,
-                handleCreateNewTask
+                handleCreateNewTask,
+                handleNewTask
             }
         }>
             {children}
