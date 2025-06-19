@@ -9,6 +9,10 @@
     border-radius: 8px;
 }
 
+.task + .task {
+    margin-block: 0.80em;
+}
+
 .task p, .task s {
     margin-inline: 0.80em;
     flex-grow: 1;
