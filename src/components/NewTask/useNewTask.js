@@ -25,12 +25,17 @@ export default function useNewTask() {
         setTaskCreated(state => state + 1)
     }
 
+    function incrementCompletedTask() {
+        setCompletedTask(state => state + 1)
+    }
+
     return {
         newTask,
         handleCreateNewTask,
         handleNewTask,
         listTasks,
         handleNewTask,
-        incrementTask
+        incrementTask,
+        incrementCompletedTask
     }
 }

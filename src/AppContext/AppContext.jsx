@@ -18,8 +18,7 @@ export const Context = createContext({
 
 export default function AppContext({ children }) {
     const { taskFinish, handleTaskFinish } = useTask()
-    const { newTask, listTasks, handleCreateNewTask, handleNewTask } = useNewTask()
-    const { taskCreated, completedTask, incrementTask, incrementCompletedTask } = useHeader()
+    const { newTask, listTasks, handleCreateNewTask, handleNewTask, incrementTask, incrementCompletedTask } = useNewTask()
 
     return (
         <Context.Provider value={
