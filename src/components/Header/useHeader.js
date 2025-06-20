@@ -5,6 +5,7 @@ export default function useHeader() {
     const [completedTask, setCompletedTask] = useState(0)
 
     function incrementTask() {
+        console.log(taskCreated)
         setTaskCreated(state => state + 1)
     }
 
