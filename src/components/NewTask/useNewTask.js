@@ -35,6 +35,8 @@ export default function useNewTask() {
         handleNewTask,
         listTasks,
         handleNewTask,
+        taskCreated,
+        completedTask,
         incrementTask,
         incrementCompletedTask
     }

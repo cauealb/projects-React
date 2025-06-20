@@ -1,7 +1,6 @@
 import { createContext } from "react";
 import useNewTask from "../components/NewTask/useNewTask";
 import useTask from "../components/Task/useTask";
-import useHeader from "../components/Header/useHeader";
 
 export const Context = createContext({
     taskFinish: 0,
@@ -18,7 +17,15 @@ export const Context = createContext({
 
 export default function AppContext({ children }) {
     const { taskFinish, handleTaskFinish } = useTask()
-    const { newTask, listTasks, handleCreateNewTask, handleNewTask, incrementTask, incrementCompletedTask } = useNewTask()
+    const { newTask, 
+            listTasks,
+            handleCreateNewTask, 
+            handleNewTask, 
+            taskCreated, 
+            completedTask,
+            incrementTask, 
+            incrementCompletedTask 
+           } = useNewTask()
 
     return (
         <Context.Provider value={
