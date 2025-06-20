@@ -4,11 +4,11 @@ import { useContext } from "react"
 import { Context } from "../../AppContext/AppContext"
 
 export default function Task({text, finish}) {
-    const { taskFinish, handleTaskFinish } = useContext(Context)
+    const { incrementTaskFinish } = useContext(Context)
 
     return(
         <div class="task">
-            <input onClick={handleTaskFinish} type="checkbox" />
+            <input onClick={incrementTaskFinish} type="checkbox" />
             {finish ? <s>{text}</s>
              : <p>{text}</p>}
             <div>

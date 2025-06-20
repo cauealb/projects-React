@@ -9,7 +9,7 @@ export default function useHeader() {
     function incrementTaskFinish(id) {
         const newList = listTasks.map(item => {
             if(item.id === id) {
-                return ({...item, finish: true})
+                return ({...item, finish: true ? false : true})
             }
         })
 
