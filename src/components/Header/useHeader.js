@@ -7,14 +7,17 @@ export default function useHeader() {
     const [taskFinish, setTaskFinish] = useState(0)
 
     function incrementTaskFinish(id) {
+
         const newList = listTasks.map(item => {
+            console.log(item)
             if(item.id === id) {
-                return ({...item, finish: true ? false : true})
+                return {...item, finish: true}
             }
+            return item;
         })
 
-        console.log(newList)
         setListTasks(newList)
+        console.log('olllllaaaaa')
     }
 
 

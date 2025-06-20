@@ -3,12 +3,12 @@ import './style/Task.css'
 import { useContext } from "react"
 import { Context } from "../../AppContext/AppContext"
 
-export default function Task({text, finish}) {
+export default function Task({id ,text, finish}) {
     const { incrementTaskFinish } = useContext(Context)
 
     return(
         <div class="task">
-            <input onClick={incrementTaskFinish} type="checkbox" />
+            <input onClick={() => incrementTaskFinish(id)} type="checkbox" />
             {finish ? <s>{text}</s>
              : <p>{text}</p>}
             <div>

@@ -11,6 +11,7 @@ export default function ListTask() {
             {listTasks.map(item => (
                 <Task 
                     key={item.id}
+                    id={item.id}
                     text={item.text}
                     finish={item.finish}
                 />
