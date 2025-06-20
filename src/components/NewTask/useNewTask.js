@@ -19,6 +19,7 @@ export default function useNewTask() {
         }
 
         setListTasks(state => [...state, newTask])
+        incrementTask()
     }
 
     function incrementTask() {
