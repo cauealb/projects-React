@@ -28,7 +28,7 @@ export default function AppContext({ children }) {
     const [completedTask, setCompletedTask] = useState(0)
 
     function handleCreateNewTask() {
-        setNewTask(state => state + 1);
+        setNewTask(state => state ? false : true);
     }
 
     function handleNewTask() {
@@ -44,10 +44,6 @@ export default function AppContext({ children }) {
 
     function incrementTask() {
         setTaskCreated(state => state + 1)
-    }
-
-    function handleCreateNewTask() {
-        setCompletedTask(state => state + 1)
     }
 
     function incrementTaskFinish(id) {

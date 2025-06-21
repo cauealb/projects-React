@@ -1,7 +1,9 @@
 import { useContext } from "react"
-import Context from '../../AppContext/AppContext'
+import { Context } from "../../AppContext/AppContext"
+
 
 export default function useNewTask() {
+    // const { newTask, handleCreateNewTask, handleNewTask } = useContext(Context)
     const { newTask, handleCreateNewTask, handleNewTask } = useContext(Context)
 
     function clickCreateTask() {
