@@ -2,6 +2,7 @@ import { createContext } from "react";
 import useNewTask from "../components/NewTask/useNewTask";
 import useTask from "../components/Task/useTask";
 import useHeader from "../components/Header/useHeader";
+import useListTask from "../components/ListTask/useListTask";
 
 export const Context = createContext({
     taskFinish: 0,
@@ -15,7 +16,8 @@ export const Context = createContext({
     incrementTask: () => {},
     incrementCompletedTask: () => {},
     setListTasks: () => {},
-    incrementTaskFinish: (id) => {}
+    incrementTaskFinish: (id) => {},
+    deleteTask: (id) => {}
 })
 
 export default function AppContext({ children }) {
@@ -31,6 +33,7 @@ export default function AppContext({ children }) {
             setListTasks
            } = useNewTask()
     const { incrementTaskFinish } = useHeader()
+    const { deleteTask } = useListTask()
         
 
     return (
@@ -47,7 +50,8 @@ export default function AppContext({ children }) {
                 incrementTask,
                 incrementCompletedTask,
                 setListTasks,
-                incrementTaskFinish
+                incrementTaskFinish,
+                deleteTask
             }
         }>
             {children}
