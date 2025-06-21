@@ -46,6 +46,10 @@ export default function AppContext({ children }) {
         setTaskCreated(state => state + 1)
     }
 
+    function handleCreateNewTask() {
+        setCompletedTask(state => state + 1)
+    }
+
     function incrementTaskFinish(id) {
         const newList = listTasks.map(item => {
             if(item.id !== id) {
