@@ -17,7 +17,7 @@ export const Context = createContext({
     incrementCompletedTask: () => {},
     setListTasks: () => {},
     incrementTaskFinish: (id) => {},
-    deleteTask: (id) => {}
+    handleDeleteTask: (id) => {}
 })
 
 export default function AppContext({ children }) {
@@ -58,7 +58,7 @@ export default function AppContext({ children }) {
         setListTasks(newList)
     };
 
-    function deleteTask(id) {
+    function handleDeleteTask(id) {
         const newList = listTasks.filter(item => item.id !== id)
 
         setListTasks(newList)
@@ -78,7 +78,7 @@ export default function AppContext({ children }) {
                 incrementTask,
                 setListTasks,
                 incrementTaskFinish,
-                deleteTask
+                handleDeleteTask
             }
         }>
             {children}
