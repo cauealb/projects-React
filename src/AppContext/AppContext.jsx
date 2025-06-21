@@ -21,7 +21,7 @@ export const Context = createContext({
 })
 
 export default function AppContext({ children }) {
-    const [ listTasks, setListTasks ] = useState([])
+    const [listTasks, setListTasks] = useState([])
     const [taskFinish, setTaskFinish] = useState(0)
 
     function incrementTaskFinish(id) {
@@ -32,7 +32,15 @@ export default function AppContext({ children }) {
 
             return {...item, finish: true}
         })
+
+        setListTasks(newList)
     };
+
+    function deleteTask(id) {
+        const newList = listTasks.filter(item => item.id !== id)
+
+        setListTasks(newList)
+    }
 
 
     const { taskFinish, handleTaskFinish } = useTask()
