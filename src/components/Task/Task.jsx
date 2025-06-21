@@ -4,7 +4,7 @@ import { useContext } from "react"
 import { Context } from "../../AppContext/AppContext"
 
 export default function Task({id ,text, finish}) {
-    const { incrementTaskFinish } = useContext(Context)
+    const { incrementTaskFinish, deleteTask } = useContext(Context)
 
     return(
         <div class="task">
@@ -12,7 +12,7 @@ export default function Task({id ,text, finish}) {
             {finish ? <s>{text}</s>
              : <p>{text}</p>}
             <div>
-                <TrashIcon class="TrashIcon" size={17} color="#7A6E76" />
+                <TrashIcon onClick={deleteTask} class="TrashIcon" size={17} color="#7A6E76" />
                 <PencilIcon class="PencilIcon" size={17} color="#7A6E76" />
             </div>
         </div>

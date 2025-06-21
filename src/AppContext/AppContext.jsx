@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 import useNewTask from "../components/NewTask/useNewTask";
 import useTask from "../components/Task/useTask";
 import useHeader from "../components/Header/useHeader";
@@ -21,6 +21,20 @@ export const Context = createContext({
 })
 
 export default function AppContext({ children }) {
+    const [ listTasks, setListTasks ] = useState([])
+    const [taskFinish, setTaskFinish] = useState(0)
+
+    function incrementTaskFinish(id) {
+        const newList = listTasks.map(item => {
+            if(item.id !== id) {
+                return item
+            }
+
+            return {...item, finish: true}
+        })
+    };
+
+
     const { taskFinish, handleTaskFinish } = useTask()
     const { newTask, 
             listTasks,
