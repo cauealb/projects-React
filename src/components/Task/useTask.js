@@ -4,8 +4,8 @@ import { Context } from "../../AppContext/AppContext";
 export default function useTask() {
     const { handleDeleteTask } = useContext(Context);
 
-    function deleteTask() {
-        handleDeleteTask();
+    function deleteTask(id) {
+        handleDeleteTask(id);
     }
 
     return {
