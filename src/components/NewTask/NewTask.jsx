@@ -1,10 +1,7 @@
 import { PlusIcon, XIcon, CheckIcon } from "@phosphor-icons/react";
 import './style/NewTask.css';
-import { useContext } from "react";
-import { Context } from "../../AppContext/AppContext";
 
 export default function NewTask() {
-    const { newTask, handleCreateNewTask, handleNewTask } = useContext(Context)
 
     if(!newTask) {
         return (

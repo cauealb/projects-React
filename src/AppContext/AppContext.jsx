@@ -73,7 +73,6 @@ export default function AppContext({ children }) {
         <Context.Provider value={
             {
                 taskFinish, 
-                handleTaskFinish,
                 newTask,
                 handleCreateNewTask,
                 listTasks,
@@ -81,7 +80,6 @@ export default function AppContext({ children }) {
                 taskCreated,
                 completedTask,
                 incrementTask,
-                incrementCompletedTask,
                 setListTasks,
                 incrementTaskFinish,
                 deleteTask
