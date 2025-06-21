@@ -17,7 +17,6 @@ export default function useHeader() {
         })
 
         setListTasks(newList)
-        console.log('olllllaaaaa')
     }
 
 
