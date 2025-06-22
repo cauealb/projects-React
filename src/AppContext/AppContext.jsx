@@ -26,6 +26,7 @@ export default function AppContext({ children }) {
     const [taskFinish, setTaskFinish] = useState(0)
     const [taskCreated, setTaskCreated] = useState(0)
     const [completedTask, setCompletedTask] = useState(0)
+    const [taskChange, setTaskChange] = useState("")
 
     function handleNewTask(text) {
         const newTask = {
@@ -43,6 +44,10 @@ export default function AppContext({ children }) {
 
         setListTasks(newList);
         decrementTaskCreated();
+    }
+
+    function handleChangeInputTask(text) {
+
     }
 
     function handleCreateNewTask() {
