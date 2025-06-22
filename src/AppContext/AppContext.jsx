@@ -17,7 +17,9 @@ export const Context = createContext({
     incrementCompletedTask: () => {},
     setListTasks: () => {},
     handleDeleteTask: (id) => {},
-    handleFinishTask: (id) =>  {}
+    handleFinishTask: (id) =>  {},
+    handleChangeInputTask: (text) => {},
+    handleChangeInputTask: (e) => {}
 })
 
 export default function AppContext({ children }) {
@@ -28,15 +30,16 @@ export default function AppContext({ children }) {
     const [completedTask, setCompletedTask] = useState(0)
     const [taskChange, setTaskChange] = useState("")
 
-    function handleNewTask(text) {
+    function handleNewTask() {
         const newTask = {
             id: new Date().getTime(),
-            text: text,
+            text: taskChange,
             finish: false
         }
 
         setListTasks(state => [...state, newTask]);
         incrementTask();
+        setTaskChange("");
     }
 
     function handleDeleteTask(id) {
@@ -46,8 +49,8 @@ export default function AppContext({ children }) {
         decrementTaskCreated();
     }
 
-    function handleChangeInputTask(text) {
-
+    function handleChangeInputTask(e) {
+        setTaskChange(e.target.value)
     }
 
     function handleCreateNewTask() {
@@ -88,7 +91,8 @@ export default function AppContext({ children }) {
                 incrementTask,
                 setListTasks,
                 handleDeleteTask,
-                handleFinishTask
+                handleFinishTask,
+                handleChangeInputTask
             }
         }>
             {children}
