@@ -31,6 +31,9 @@ export default function AppContext({ children }) {
     const [taskChange, setTaskChange] = useState("")
 
     function handleNewTask() {
+        if(taskChange === '') return alert("Insira algo para concluir sua inserção de tarefa!")
+        if(taskChange.length === 1) return alert("Insira uma tarefa verdadeira!")
+
         const newTask = {
             id: new Date().getTime(),
             text: taskChange,
@@ -39,7 +42,6 @@ export default function AppContext({ children }) {
 
         setListTasks(state => [...state, newTask]);
         incrementTask();
-        setTaskChange("");
     }
 
     function handleDeleteTask(id) {
