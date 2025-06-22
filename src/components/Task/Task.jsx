@@ -3,11 +3,11 @@ import './style/Task.css'
 import useTask from "./useTask"
 
 export default function Task({id ,text, finish}) {
-    const { deleteTask } = useTask()
+    const { deleteTask, taskFinish } = useTask()
 
     return(
         <div class="task">
-            <input type="checkbox" />
+            <input onClick={() => taskFinish(id)} type="checkbox" />
             {finish ? <s>{text}</s>
              : <p>{text}</p>}
             <div>

@@ -16,13 +16,13 @@ export const Context = createContext({
     incrementTask: () => {},
     incrementCompletedTask: () => {},
     setListTasks: () => {},
-    incrementTaskFinish: (id) => {},
-    handleDeleteTask: (id) => {}
+    handleDeleteTask: (id) => {},
+    handleFinishTask: (id) =>  {}
 })
 
 export default function AppContext({ children }) {
-    const [newTask, setNewTask] = useState(false)
     const [listTasks, setListTasks] = useState([])
+    const [newTask, setNewTask] = useState(false)
     const [taskFinish, setTaskFinish] = useState(0)
     const [taskCreated, setTaskCreated] = useState(0)
     const [completedTask, setCompletedTask] = useState(0)
@@ -37,6 +37,19 @@ export default function AppContext({ children }) {
         setListTasks(newList);
         decrementTaskCreated();
     }
+
+    function handleFinishTask(id) {{
+        const newList = listTasks.map(item => {
+            if(item.id !== id) {
+                return item
+            }
+
+            return {...item, finish: item.finish ? false : true}
+        })
+
+        console.log(newList,'id:', id)
+        setListTasks(newList);
+    }}
 
     function handleNewTask() {
         const newTask = {
@@ -56,18 +69,6 @@ export default function AppContext({ children }) {
     function decrementTaskCreated() {
         setTaskCreated(state => state - 1)
     }
-
-    function incrementTaskFinish(id) {
-        const newList = listTasks.map(item => {
-            if(item.id !== id) {
-                return item
-            }
-
-            return {...item, finish: true}
-        })
-
-        setListTasks(newList)
-    };
         
 
     return (
@@ -82,8 +83,8 @@ export default function AppContext({ children }) {
                 completedTask,
                 incrementTask,
                 setListTasks,
-                incrementTaskFinish,
-                handleDeleteTask
+                handleDeleteTask,
+                handleFinishTask
             }
         }>
             {children}
