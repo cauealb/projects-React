@@ -31,6 +31,13 @@ export default function AppContext({ children }) {
         setNewTask(state => state ? false : true);
     }
 
+    function handleDeleteTask(id) {
+        const newList = listTasks.filter(item => item.id !== id)
+
+        setListTasks(newList);
+        decrementTaskCreated();
+    }
+
     function handleNewTask() {
         const newTask = {
             id: new Date().getTime(),
@@ -46,6 +53,10 @@ export default function AppContext({ children }) {
         setTaskCreated(state => state + 1)
     }
 
+    function decrementTaskCreated() {
+        setTaskCreated(state => state - 1)
+    }
+
     function incrementTaskFinish(id) {
         const newList = listTasks.map(item => {
             if(item.id !== id) {
@@ -57,12 +68,6 @@ export default function AppContext({ children }) {
 
         setListTasks(newList)
     };
-
-    function handleDeleteTask(id) {
-        const newList = listTasks.filter(item => item.id !== id)
-
-        setListTasks(newList)
-    }
         
 
     return (
