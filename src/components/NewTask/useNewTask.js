@@ -3,15 +3,14 @@ import { Context } from "../../AppContext/AppContext"
 
 
 export default function useNewTask() {
-    // const { newTask, handleCreateNewTask, handleNewTask } = useContext(Context)
     const { newTask, handleCreateNewTask, handleNewTask } = useContext(Context)
 
     function clickCreateTask() {
         handleCreateNewTask()
     }
 
-    function addTask() {
-        handleNewTask()
+    function addTask(text) {
+        handleNewTask(text)
     }
 
     return {

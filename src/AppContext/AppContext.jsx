@@ -27,8 +27,15 @@ export default function AppContext({ children }) {
     const [taskCreated, setTaskCreated] = useState(0)
     const [completedTask, setCompletedTask] = useState(0)
 
-    function handleCreateNewTask() {
-        setNewTask(state => state ? false : true);
+    function handleNewTask(text) {
+        const newTask = {
+            id: new Date().getTime(),
+            text: text,
+            finish: false
+        }
+
+        setListTasks(state => [...state, newTask]);
+        incrementTask();
     }
 
     function handleDeleteTask(id) {
@@ -36,6 +43,10 @@ export default function AppContext({ children }) {
 
         setListTasks(newList);
         decrementTaskCreated();
+    }
+
+    function handleCreateNewTask() {
+        setNewTask(state => state ? false : true);
     }
 
     function handleFinishTask(id) {{
@@ -47,20 +58,8 @@ export default function AppContext({ children }) {
             return {...item, finish: item.finish ? false : true}
         })
 
-        console.log(newList,'id:', id)
         setListTasks(newList);
     }}
-
-    function handleNewTask() {
-        const newTask = {
-            id: new Date().getTime(),
-            text: 'blablabla',
-            finish: false
-        }
-
-        setListTasks(state => [...state, newTask]);
-        incrementTask();
-    }
 
     function incrementTask() {
         setTaskCreated(state => state + 1)
