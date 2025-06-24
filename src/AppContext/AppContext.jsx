@@ -69,6 +69,7 @@ export default function AppContext({ children }) {
         })
 
         setListTasks(newList);
+        console.log(listTasks)
     }}
 
     function incrementTask() {
@@ -77,6 +78,14 @@ export default function AppContext({ children }) {
 
     function decrementTaskCreated() {
         setTaskCreated(state => state - 1)
+    }
+
+    function incrementTaskFinish() {
+        listTasks.forEach(item => {
+            if(item.finish) {
+                setTaskFinish(state => state + 1)
+            }
+        })
     }
         
 

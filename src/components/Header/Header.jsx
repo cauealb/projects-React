@@ -6,6 +6,7 @@ import { Context } from '../../AppContext/AppContext'
 
 export default function Header() {
     const { taskCreated, completedTask } = useContext(Context)
+    const 
 
     return(
         <header class="hero">
