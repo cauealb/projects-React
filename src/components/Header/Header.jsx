@@ -1,12 +1,10 @@
-import { useContext } from 'react'
 import logo from '../../assets/Logo.svg'
 import logoTitle from '../../assets/ToDo List.svg'
 import './style/Header.css'
-import { Context } from '../../AppContext/AppContext'
+import useHeader from './useHeader'
 
 export default function Header() {
-    const { taskCreated, completedTask } = useContext(Context)
-    const 
+    const { taskCreated, taskFinish } = useHeader()
 
     return(
         <header class="hero">
@@ -21,7 +19,7 @@ export default function Header() {
                 </div>
                 <div class="taskFinish">
                     <p>Concluídas</p>
-                    <p>{`${completedTask} de ${taskCreated}`}</p>  
+                    <p>{`${taskFinish} de ${taskCreated}`}</p>  
                 </div>
             </div>
         </header>

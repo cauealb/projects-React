@@ -76,18 +76,17 @@ export default function AppContext({ children }) {
         setTaskCreated(state => state + 1)
     }
 
+    function incrementTaskFinish() {
+        setTaskFinish(state => state + 1)
+    }
+
     function decrementTaskCreated() {
         setTaskCreated(state => state - 1)
     }
-
-    function incrementTaskFinish() {
-        listTasks.forEach(item => {
-            if(item.finish) {
-                setTaskFinish(state => state + 1)
-            }
-        })
+    
+    function decrementTaskFinish() {
+        setTaskFinish(state => state -1)
     }
-        
 
     return (
         <Context.Provider value={

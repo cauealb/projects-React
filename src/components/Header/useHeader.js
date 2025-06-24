@@ -3,9 +3,10 @@ import { Context } from "../../AppContext/AppContext";
 
 
 export default function useHeader() {
-    const { taskCreated } = useContext(Context)
+    const { taskCreated, taskFinish } = useContext(Context)
 
     return {
-        taskCreated
+        taskCreated,
+        taskFinish
     }
 }
