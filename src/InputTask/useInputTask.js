@@ -24,6 +24,7 @@ export default function useInputTask() {
     return {
         addTask,
         clickCreateTask,
-        changeTask
+        changeTask,
+        editTask
     }
 }

@@ -4,7 +4,7 @@ import useTask from "./useTask"
 import InputTask from "../../InputTask/InputTask"
 
 export default function Task({id ,text, finish, edit}) {
-    const { deleteTask, taskFinish } = useTask()
+    const { deleteTask, taskFinish, editTask } = useTask()
 
     if(!edit) {
         return(
@@ -14,7 +14,7 @@ export default function Task({id ,text, finish, edit}) {
              : <p>{text}</p>}
             <div>
                 <TrashIcon onClick={() => deleteTask(id)} class="TrashIcon" size={17} color="#7A6E76" />
-                <PencilIcon class="PencilIcon" size={17} color="#7A6E76" />
+                <PencilIcon onClick={() => editTask(id)} class="PencilIcon" size={17} color="#7A6E76" />
             </div>
         </div>
     )
