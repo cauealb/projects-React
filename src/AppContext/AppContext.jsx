@@ -18,7 +18,8 @@ export const Context = createContext({
     setListTasks: () => {},
     handleDeleteTask: (id) => {},
     handleFinishTask: (id) =>  {},
-    handleChangeInputTask: (e) => {}
+    handleChangeInputTask: (e) => {},
+    handleEditTask: (id) => {}
 })
 
 export default function AppContext({ children }) {
@@ -79,7 +80,7 @@ export default function AppContext({ children }) {
         setTaskCreated(state => state - 1)
     }
 
-    function editTask(id) {
+    function handleEditTask(id) {
         const newList = listTasks.map(item => {
             if(item.id === id) {
                 return {...item, edit: item.edit ? false : true}
@@ -106,7 +107,8 @@ export default function AppContext({ children }) {
                 setListTasks,
                 handleDeleteTask,
                 handleFinishTask,
-                handleChangeInputTask
+                handleChangeInputTask,
+                handleEditTask
             }
         }>
             {children}
