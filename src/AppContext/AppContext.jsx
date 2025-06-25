@@ -18,7 +18,6 @@ export const Context = createContext({
     setListTasks: () => {},
     handleDeleteTask: (id) => {},
     handleFinishTask: (id) =>  {},
-    handleChangeInputTask: (text) => {},
     handleChangeInputTask: (e) => {}
 })
 
@@ -37,7 +36,8 @@ export default function AppContext({ children }) {
         const newTask = {
             id: new Date().getTime(),
             text: taskChange,
-            finish: false
+            finish: false,
+            edit: false
         }
 
         setListTasks(state => [...state, newTask]);
@@ -65,7 +65,7 @@ export default function AppContext({ children }) {
                 return item
             }
 
-            return {...item, finish: item.finish ? false && setTaskFinish(state => state - 1) : true && setTaskFinish(state => state + 1) }
+            return {...item, finish: item.finish ? false : true}
         })
 
         setListTasks(newList);
