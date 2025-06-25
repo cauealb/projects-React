@@ -15,7 +15,7 @@ export default function NewTask() {
     )
     } else {
         return (
-            <InputTask />
+            <InputTask isNewTask={true} />
         )
     }
 }

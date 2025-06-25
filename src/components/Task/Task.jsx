@@ -1,6 +1,7 @@
 import { TrashIcon, PencilIcon } from "@phosphor-icons/react"
 import './style/Task.css'
 import useTask from "./useTask"
+import InputTask from "../../InputTask/InputTask"
 
 export default function Task({id ,text, finish, edit}) {
     const { deleteTask, taskFinish } = useTask()
@@ -20,6 +21,6 @@ export default function Task({id ,text, finish, edit}) {
     }
 
     return (
-        <input type="text" />
+        <InputTask isNewTask={false} />
     )
 }
