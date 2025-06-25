@@ -1,6 +1,9 @@
+import { CheckIcon, XIcon } from "@phosphor-icons/react";
 
 
 export default function InputTask() {
+    
+
     return (
             <div class="inputTask">
                 <input onChange={changeTask} type="text" />
