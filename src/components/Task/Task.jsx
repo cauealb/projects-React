@@ -21,6 +21,6 @@ export default function Task({id ,text, finish, edit}) {
     }
 
     return (
-        <InputTask isNewTask={false} />
+        <InputTask isNewTask={false} id={id} />
     )
 }

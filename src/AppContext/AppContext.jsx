@@ -19,7 +19,8 @@ export const Context = createContext({
     handleDeleteTask: (id) => {},
     handleFinishTask: (id) =>  {},
     handleChangeInputTask: (e) => {},
-    handleEditTask: (id) => {}
+    handleEditTask: (id) => {},
+    handleNoEditTask: (id) => {}
 })
 
 export default function AppContext({ children }) {
@@ -83,13 +84,23 @@ export default function AppContext({ children }) {
     function handleEditTask(id) {
         const newList = listTasks.map(item => {
             if(item.id === id) {
-                return {...item, edit: item.edit ? false : true}
+                return {...item, edit: true}
             }
 
             return item;
         })
 
         setListTasks(newList);
+    }
+
+    function handleNoEditTask(id) {
+        const newList = listTasks.map(item => {
+            if(item.id === id) {
+                return {...item, finish: false}
+            }
+        })
+
+        setListTasks(newList)
     }
 
 
@@ -108,7 +119,8 @@ export default function AppContext({ children }) {
                 handleDeleteTask,
                 handleFinishTask,
                 handleChangeInputTask,
-                handleEditTask
+                handleEditTask,
+                handleNoEditTask
             }
         }>
             {children}

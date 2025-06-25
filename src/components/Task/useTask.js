@@ -19,7 +19,7 @@ export default function useTask() {
     return {
         deleteTask,
         taskFinish,
-        editTask
+        editTask,
     }
 
 }
