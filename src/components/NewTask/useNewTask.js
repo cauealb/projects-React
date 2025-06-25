@@ -9,10 +9,6 @@ export default function useNewTask() {
         handleCreateNewTask()
     }
 
-    function addTask(text) {
-        handleNewTask(text)
-    }
-
     function changeTask(e) {
         handleChangeInputTask(e)
     }

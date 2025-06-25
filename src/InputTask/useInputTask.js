@@ -3,10 +3,23 @@ import { Context } from "../AppContext/AppContext"
 
 
 export default function useInputTask() {
-    const {  } = useContext(Context)
+    const {handleNewTask, handleCreateNewTask, handleChangeInputTask } = useContext(Context)
 
+    function addTask(text) {
+        handleNewTask(text)
+    }
+
+    function clickCreateTask() {
+        handleCreateNewTask()
+    }
+
+    function changeTask(e) {
+        handleChangeInputTask(e)
+    }
 
     return {
-        
+        addTask,
+        clickCreateTask,
+        changeTask
     }
 }
