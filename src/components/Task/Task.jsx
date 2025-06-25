@@ -2,10 +2,11 @@ import { TrashIcon, PencilIcon } from "@phosphor-icons/react"
 import './style/Task.css'
 import useTask from "./useTask"
 
-export default function Task({id ,text, finish}) {
+export default function Task({id ,text, finish, edit}) {
     const { deleteTask, taskFinish } = useTask()
 
-    return(
+    if(!edit) {
+        return(
         <div class="task">
             <input onClick={() => taskFinish(id)} type="checkbox" />
             {finish ? <s>{text}</s>
@@ -15,5 +16,10 @@ export default function Task({id ,text, finish}) {
                 <PencilIcon class="PencilIcon" size={17} color="#7A6E76" />
             </div>
         </div>
+    )
+    }
+
+    return (
+        <input type="text" />
     )
 }
