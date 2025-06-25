@@ -1,8 +1,9 @@
 import { CheckIcon, XIcon } from "@phosphor-icons/react";
-
+import './style/InputTask.css'
+import useInputTask from "./useInputTask";
 
 export default function InputTask() {
-    
+    const {  } = useInputTask()
 
     return (
             <div class="inputTask">
