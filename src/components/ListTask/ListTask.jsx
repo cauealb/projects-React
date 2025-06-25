@@ -14,7 +14,7 @@ export default function ListTask() {
                     id={item.id}
                     text={item.text}
                     finish={item.finish}
-                    edit={item.id}
+                    edit={item.edit}
                 />
             ))}
         </>

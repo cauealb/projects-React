@@ -96,7 +96,7 @@ export default function AppContext({ children }) {
     function handleNoEditTask(id) {
         const newList = listTasks.map(item => {
             if(item.id === id) {
-                return {...item, finish: false}
+                return {...item, edit: false}
             }
         })
 
