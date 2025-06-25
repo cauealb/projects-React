@@ -4,7 +4,7 @@ import useNewTask from "./useNewTask";
 import InputTask from "../../InputTask/InputTask";
 
 export default function NewTask() {
-    const { newTask, addTask, clickCreateTask, changeTask } = useNewTask()
+    const { newTask,  clickCreateTask, changeTask } = useNewTask()
 
     if(!newTask) {
         return (
