@@ -3,7 +3,7 @@ import './style/InputTask.css'
 import useInputTask from "./useInputTask";
 
 export default function InputTask() {
-    const { addTask } = useInputTask()
+    const { addTask, changeTask, clickCreateTask } = useInputTask()
 
     return (
             <div class="inputTask">
