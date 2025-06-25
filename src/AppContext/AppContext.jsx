@@ -79,6 +79,18 @@ export default function AppContext({ children }) {
         setTaskCreated(state => state - 1)
     }
 
+    function editTask(id) {
+        const newList = listTasks.map(item => {
+            if(item.id === id) {
+                return {...item, edit: item.edit ? false : true}
+            }
+
+            return item;
+        })
+
+        setListTasks(newList);
+    }
+
 
     return (
         <Context.Provider value={
