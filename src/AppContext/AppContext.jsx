@@ -98,9 +98,12 @@ export default function AppContext({ children }) {
             if(item.id === id) {
                 return {...item, edit: false}
             }
+
+            return item
         })
 
         setListTasks(newList)
+        console.log(id)
     }
 
 
