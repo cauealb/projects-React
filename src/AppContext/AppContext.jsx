@@ -84,18 +84,17 @@ export default function AppContext({ children }) {
     function handleEditTask(id) {
         const newList = listTasks.map(item => {
             if(item.id === id) {
+                setTaskChange(item.text)
                 return {...item, edit: true}
             }
 
             return item;
         })
 
-        console.log(takeTaskName(id))
-
         setListTasks(newList);
     }
 
-    function handleNoEditTask(id) {
+    function handleNoEditTask(id) { 
         const newList = listTasks.map(item => {
             if(item.id === id) {
                 return {...item, edit: false}
@@ -105,12 +104,6 @@ export default function AppContext({ children }) {
         })
 
         setListTasks(newList)
-    }
-
-    function takeTaskName(id) {
-        const Task = listTasks.filter(item => item.id === id)
-
-        return Task.text
     }
     
 
