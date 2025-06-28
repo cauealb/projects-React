@@ -90,6 +90,8 @@ export default function AppContext({ children }) {
             return item;
         })
 
+        console.log(takeTaskName(id))
+
         setListTasks(newList);
     }
 
@@ -103,9 +105,14 @@ export default function AppContext({ children }) {
         })
 
         setListTasks(newList)
-        console.log(id)
     }
 
+    function takeTaskName(id) {
+        const Task = listTasks.filter(item => item.id === id)
+
+        return Task.text
+    }
+    
 
     return (
         <Context.Provider value={
