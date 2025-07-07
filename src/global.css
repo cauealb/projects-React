@@ -1,0 +1,41 @@
+:root {
+    /* Grayscale */
+    --white: #FFFFFF;
+    --gray-100: #F7F3F6;
+    --gray-200: #F4E6F0;
+    --gray-300: #7A6E76;
+    --gray-400: #332E32;
+
+    /* Green */
+    --green-light: #CDDFCC;
+    --green-base: #52A350;
+    --green-dark: #2F5C2D;
+
+    /* Pink */
+    --pink-light: #E9CCE1;
+    --pink-base: #C257A4;
+    --pink-dark: #884074;
+
+    /* Fonts: Cairo */
+    --cairo: "Cairo", sans-serif;
+
+    --body-md-regular: 400 16px/24px var(--cairo);
+    --body-md-semibold: 600 16px/24px var(--cairo);
+    --body-sm-semibold: 600 14px/20px var(--cairo);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.space {
+    width: 31em;
+}
