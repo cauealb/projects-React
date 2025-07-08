@@ -1,5 +1,5 @@
 import { createContext, useMemo, useState, type ReactNode } from "react"
-import { ThemeProvider, DefaultTheme  } from "styled-components"
+import { ThemeProvider, type DefaultTheme } from "styled-components"
 
 import themes from "../../style/theme"
 
