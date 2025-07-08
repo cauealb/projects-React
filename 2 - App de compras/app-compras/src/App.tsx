@@ -1,11 +1,11 @@
-
+import AppContext from "./components/AppContext/AppContext"
 
 export default function App() {
   
 
   return (
-      <>
-        <h1>Hello React!</h1>
-      </>
+      <AppContext>
+        <h1>Hello Word!</h1>
+      </AppContext>
   )
 }
