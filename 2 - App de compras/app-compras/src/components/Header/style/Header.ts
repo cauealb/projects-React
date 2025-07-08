@@ -5,5 +5,5 @@ interface PropsStyledHeader {
 }
 
 export const ContainerHeader = styled.header`
-    background-color: #09c500;
+    background-color: ${({ theme }) => theme.bg};
 `;

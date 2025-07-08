@@ -1,5 +1,5 @@
 import { createContext, useMemo, useState, type ReactNode } from "react"
-import { ThemeProvider } from "styled-components"
+import { ThemeProvider, DefualtTheme } from "styled-components"
 
 import themes from "../../style/theme"
 
@@ -18,9 +18,7 @@ export const Context = createContext<PropsContext> ({
 export default function AppContext({ children }: PropsAppContext) {
     const [theme, setTheme] = useState<'light' | 'dark'>('light')
 
-    type ThemeType = typeof themes.dark
-
-    const currentTheme = useMemo<ThemeType>(() => {
+    const currentTheme: DefualtTheme = useMemo(() => {
         return themes[theme] || themes.light;
     }, [themes])
 
