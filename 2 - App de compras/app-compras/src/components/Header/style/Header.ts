@@ -8,8 +8,10 @@ export const ContainerNameCompany = styled.div`
     display: flex;
     gap: 1em;
     align-items: center;
+    padding-inline: 1em;
     
     h1 {
-        color: ${({ theme }) => theme.colorWhite} 
+        color: ${({ theme }) => theme.colorWhite};
+        font-size: 1.6em;
     }
 `;
