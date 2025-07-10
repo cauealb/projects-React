@@ -28,6 +28,7 @@ export const ContainerInfos = styled.div`
         display: flex;
         gap: 0.80em;
         align-items: center;
+        color: ${({ theme }) => theme.colorWhite};
 
         img{
             width: 40px;

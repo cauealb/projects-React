@@ -13,7 +13,7 @@ export default function Header() {
                 <Storefront color='#fff' size={26} style={{cursor: 'pointer'}} />
                 <Scroll color='#fff' size={26} style={{cursor: 'pointer'}} />
                 <div>
-                    <p>Cauê</p>
+                    <p>Cauê Alves</p>
                     <img src={profile} alt="Profile image" />
                     <CaretDown color='#fff' style={{cursor: 'pointer'}} />
                 </div>
