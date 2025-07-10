@@ -8,4 +8,8 @@ export const ContainerNameCompany = styled.div`
     display: flex;
     gap: 1em;
     align-items: center;
+    
+    h1 {
+        color: ${({ theme }) => theme.colorWhite} 
+    }
 `;
