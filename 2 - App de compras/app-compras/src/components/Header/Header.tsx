@@ -1,5 +1,6 @@
 import { List, Storefront, Scroll } from 'phosphor-react'
 import { ContainerHeader, ContainerNameCompany, ContainerInfos } from './style/Header'
+import profile from '../../img/profile.jpg'
 
 export default function Header() {
     return (
@@ -13,7 +14,7 @@ export default function Header() {
                 <Scroll color='#fff' size={26} />
                 <div>
                     <p>Cauê</p>
-                    <img src='../' alt="Profile image" />
+                    <img src={profile} alt="Profile image" />
                 </div>
             </ContainerInfos>
         </ContainerHeader>

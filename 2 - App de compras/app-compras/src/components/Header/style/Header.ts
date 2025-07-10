@@ -26,6 +26,13 @@ export const ContainerInfos = styled.div`
 
     div {
         display: flex;
-        align-items: center
+        align-items: center;
+
+        img{
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
     }
 `
