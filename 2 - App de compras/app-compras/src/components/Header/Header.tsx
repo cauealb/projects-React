@@ -1,5 +1,5 @@
 import { List, Storefront, Scroll } from 'phosphor-react'
-import { ContainerHeader, ContainerNameCompany } from './style/Header'
+import { ContainerHeader, ContainerNameCompany, ContainerInfos } from './style/Header'
 
 export default function Header() {
     return (
@@ -8,14 +8,14 @@ export default function Header() {
                 <List color='#fff' size={26} />
                 <h1>Empresa teste</h1>
             </ContainerNameCompany> 
-            <div>
+            <ContainerInfos>
                 <Storefront color='#fff' size={26} />
                 <Scroll color='#fff' size={26} />
                 <div>
                     <p>Cauê</p>
                     <img src="../../../img/profile.jpg" alt="Profile image" />
                 </div>
-            </div>
+            </ContainerInfos>
         </ContainerHeader>
     )
 }

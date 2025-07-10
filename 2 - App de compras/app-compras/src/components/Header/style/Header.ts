@@ -15,3 +15,13 @@ export const ContainerNameCompany = styled.div`
         font-size: 1.6em;
     }
 `;
+
+export const ContainerInfos = styled.div`
+    display: flex;
+    gap: 1em;
+
+    div {
+        display: flex;
+        align-items: center
+    }
+`
