@@ -1,14 +1,16 @@
 import styled from "styled-components";
 
 export const ContainerHeader = styled.header`
+    display: grid;
+    grid-auto-flow: column;
     background-color: ${({ theme }) => theme.bgPrincipal};
+    padding-inline: 1em;
 `;
 
 export const ContainerNameCompany = styled.div`
     display: flex;
     gap: 1em;
     align-items: center;
-    padding-inline: 1em;
     
     h1 {
         color: ${({ theme }) => theme.colorWhite};
@@ -19,6 +21,8 @@ export const ContainerNameCompany = styled.div`
 export const ContainerInfos = styled.div`
     display: flex;
     gap: 1em;
+    justify-content: flex-end;
+    align-items: center;
 
     div {
         display: flex;

@@ -13,7 +13,7 @@ export default function Header() {
                 <Scroll color='#fff' size={26} />
                 <div>
                     <p>Cauê</p>
-                    <img src="../../../img/profile.jpg" alt="Profile image" />
+                    <img src='../' alt="Profile image" />
                 </div>
             </ContainerInfos>
         </ContainerHeader>
