@@ -1,14 +1,15 @@
 import Burger from "./Burger/Burger";
+import { ContainerPanel } from "./style/Panel";
 
 
 export default function Panel() {
     return (
         <>
-            <div>
+            <ContainerPanel>
                 <div>
                     <Burger />
                 </div>
-            </div>
+            </ContainerPanel>
         </>
     )
 }
