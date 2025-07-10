@@ -12,6 +12,12 @@ export default function Panel() {
                     <Burger />
                     <Burger />
                     <Burger />
+                    <Burger />
+                    <Burger />
+                    <Burger />
+                    <Burger />
+                    <Burger />
+                    <Burger />
                 </ContainerPanelBuger>
             </ContainerPanel>
         </>

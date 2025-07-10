@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const ContainerBuger = styled.article`
     display: grid;
     align-items: center;
+    height: 15em;
     width: fit-content;
 `;
 
