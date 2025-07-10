@@ -1,4 +1,4 @@
-import { List, Storefront, Scroll } from 'phosphor-react'
+import { List, Storefront, Scroll, CaretDown } from 'phosphor-react'
 import { ContainerHeader, ContainerNameCompany, ContainerInfos } from './style/Header'
 import profile from '../../img/profile.jpg'
 
@@ -10,11 +10,12 @@ export default function Header() {
                 <h1>Empresa teste</h1>
             </ContainerNameCompany> 
             <ContainerInfos>
-                <Storefront color='#fff' size={26} />
-                <Scroll color='#fff' size={26} />
+                <Storefront color='#fff' size={26} style={{cursor: 'pointer'}} />
+                <Scroll color='#fff' size={26} style={{cursor: 'pointer'}} />
                 <div>
                     <p>Cauê</p>
                     <img src={profile} alt="Profile image" />
+                    <CaretDown color='#fff' style={{cursor: 'pointer'}} />
                 </div>
             </ContainerInfos>
         </ContainerHeader>

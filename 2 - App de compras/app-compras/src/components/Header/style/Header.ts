@@ -26,6 +26,7 @@ export const ContainerInfos = styled.div`
 
     div {
         display: flex;
+        gap: 0.80em;
         align-items: center;
 
         img{
