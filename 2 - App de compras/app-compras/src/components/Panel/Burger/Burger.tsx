@@ -1,5 +1,5 @@
 import burgerTeste from '../../../img/Burgers/comnbo-noite.png'
-import { ContainerBuger, ContainerIMG } from './style/Burger'
+import { ContainerBuger, ContainerIMG, ContainerInfosBurger } from './style/Burger'
 
 export default function Burger() {
     return(
@@ -8,8 +8,10 @@ export default function Burger() {
                 <ContainerIMG>
                     <img src={burgerTeste} alt="" />
                 </ContainerIMG>
-                <strong>Combo da noite</strong>
-                <span>$7.99</span>
+                <ContainerInfosBurger>
+                    <strong>Combo da noite</strong>
+                    <span>$7.99</span>
+                </ContainerInfosBurger>
             </ContainerBuger>
         </>
     )
