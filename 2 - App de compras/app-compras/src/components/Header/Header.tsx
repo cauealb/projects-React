@@ -1,6 +1,6 @@
 import { List, Storefront, Scroll, CaretDown } from 'phosphor-react'
 import { ContainerHeader, ContainerNameCompany, ContainerInfos } from './style/Header'
-import profile from '../../img/profile.jpg'
+import profile from '../../img/Profile/profile.jpg'
 
 export default function Header() {
     return (
