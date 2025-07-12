@@ -8,5 +8,10 @@ export const ButtonStyle = styled.button`
     color: ${({ theme }) => theme.colorWhite};
     padding: 0.30em 8em;
     font-weight: bold;
-    letter-spacing: 0.09em
+    letter-spacing: 0.09em;
+    cursor: pointer;
+
+    &:hover {
+        background-color: ${({ theme }) => theme.hoverBgPrincipal};
+    }
 `;

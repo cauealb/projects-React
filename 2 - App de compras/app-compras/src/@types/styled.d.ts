@@ -7,5 +7,6 @@ declare module 'styled-components' {
         colorBlack: string
         colorRed: string
         colorLines: string
+        hoverBgPrincipal: string
     }
 }
