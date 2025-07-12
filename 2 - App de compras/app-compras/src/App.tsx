@@ -1,5 +1,5 @@
 import AppContext from "./components/AppContext/AppContext"
-import Button from "./components/Button/Button"
+import ButtonPay from "./components/Button/ButtonPay"
 import Header from "./components/Header/Header"
 import Panel from "./components/Panel/Panel"
 
@@ -10,9 +10,9 @@ export default function App() {
       <AppContext>
         <Header />
         <Panel />
-        <Button>
+        <ButtonPay>
           <p>Pay</p>
-        </Button>
+        </ButtonPay>
       </AppContext>
   )
 }
