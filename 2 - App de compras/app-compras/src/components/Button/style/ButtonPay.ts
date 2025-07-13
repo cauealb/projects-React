@@ -15,3 +15,5 @@ export const ButtonStyle = styled.button`
         background-color: ${({ theme }) => theme.hoverBgPrincipal};
     }
 `;
+
+export const ButtonTitle = styled.
