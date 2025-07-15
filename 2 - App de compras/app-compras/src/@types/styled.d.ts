@@ -10,5 +10,8 @@ declare module 'styled-components' {
         colorLines: string
         hoverBgPrincipal: string
         hoverBgSecundary: string
+        small: Number
+        medium: Number
+        large: Number
     }
 }
