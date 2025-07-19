@@ -4,6 +4,7 @@ declare module 'styled-components' {
     export interface DefaultTheme  {
         bgPrincipal: string
         bgSecundary: string
+        bgInput: string
         colorWhite: string
         colorBlack: string
         colorRed: string

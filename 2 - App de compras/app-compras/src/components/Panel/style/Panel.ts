@@ -40,5 +40,13 @@ export const AddNewItem = styled.div`
 `;
 
 export const Filter = styled.form`
+    display: flex;
+    gap: 1em;
 
+    input {
+        padding: 0.8em;
+        border: none;
+        background-color: ${({ theme }) => theme.bgInput};
+        outline: none;
+    }
 `
