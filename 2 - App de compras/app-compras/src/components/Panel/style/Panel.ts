@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContainerPanel = styled.div`
     box-shadow: 2px 0 8px ${({ theme }) => theme.colorLines};
-    max-width: 70em;
+    max-width: 65em;
     height: 30em;
     /* display: grid; */
     padding: 1em;
@@ -14,7 +14,6 @@ export const ContainerPanel = styled.div`
 export const ContainerPanelBuger = styled.div`
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    justify-content: space-around;
 `;
 export const FormPanel = styled.header`
     display: flex;
@@ -49,6 +48,7 @@ export const Filter = styled.form`
         background-color: ${({ theme }) => theme.bgInput};
         outline: none;
         width: 18em;
+        font-size: 0.9em;
     }
 
     button {
