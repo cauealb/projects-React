@@ -10,7 +10,7 @@ export const ButtonStyle = styled.button`
     font-weight: bold;
     letter-spacing: 0.09em;
     cursor: pointer;
-    
+    transition: background-color 0.3s linear;
 
     &:hover {
         background-color: ${({ theme }) => theme.hoverBgPrincipal};
