@@ -10,10 +10,9 @@ export const ButtonStyle = styled.button`
     font-weight: bold;
     letter-spacing: 0.09em;
     cursor: pointer;
+    
 
     &:hover {
         background-color: ${({ theme }) => theme.hoverBgPrincipal};
     }
 `;
-
-export const ButtonTitle = styled.
