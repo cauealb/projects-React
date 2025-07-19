@@ -1,6 +1,10 @@
 import { MagnifyingGlass, Plus } from "phosphor-react";
 import Burger from "./Burger/Burger";
-import { ContainerPanel, ContainerPanelBuger, FormPanel } from "./style/Panel";
+import { ContainerPanel, 
+        ContainerPanelBuger,
+        FormPanel, 
+        AddNewItem, 
+        Filter } from "./style/Panel";
 
 
 export default function Panel() {
@@ -8,14 +12,14 @@ export default function Panel() {
         <>
             <ContainerPanel>
                 <FormPanel>
-                    <div>
+                    <AddNewItem>
                         <Plus color="#009961"/>
                         <strong>Add new item</strong>
-                    </div>
-                    <form>
+                    </AddNewItem>
+                    <Filter>
                         <input type="text" placeholder="Search names here..." />
                         <button><MagnifyingGlass color="#fff" /></button>
-                    </form>
+                    </Filter>
                 </FormPanel>
                 <ContainerPanelBuger>
                     <Burger />

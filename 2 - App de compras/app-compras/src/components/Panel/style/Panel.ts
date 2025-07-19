@@ -20,5 +20,13 @@ export const FormPanel = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: yellow
+    padding-block: 1em;
+`
+
+export const AddNewItem = styled.div`
+
+`;
+
+export const Filter = styled.form`
+
 `
