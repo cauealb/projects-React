@@ -18,7 +18,7 @@ export default function Panel() {
                     </AddNewItem>
                     <Filter>
                         <input type="text" placeholder="Search names here..." />
-                        <button><MagnifyingGlass color="#fff" /></button>
+                        <button><MagnifyingGlass color="#fff" size={24} /></button>
                     </Filter>
                 </FormPanel>
                 <ContainerPanelBuger>

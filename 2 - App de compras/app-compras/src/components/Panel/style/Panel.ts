@@ -48,5 +48,21 @@ export const Filter = styled.form`
         border: none;
         background-color: ${({ theme }) => theme.bgInput};
         outline: none;
+        width: 18em;
+    }
+
+    button {
+        border: none;
+        background-color: ${({ theme }) => theme.bgPrincipal};
+        cursor: pointer;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.7em;
+
+        &:hover {
+            background-color: ${({ theme }) => theme.hoverBgPrincipal}
+        }
     }
 `
