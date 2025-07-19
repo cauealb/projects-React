@@ -24,7 +24,19 @@ export const FormPanel = styled.header`
 `
 
 export const AddNewItem = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3em;
+    cursor: pointer;
 
+    strong {
+        color: ${({ theme }) => theme.bgPrincipal};
+
+        &:hover {
+            color: ${({ theme }) => theme.hoverBgPrincipal}
+        }
+    }
 `;
 
 export const Filter = styled.form`
